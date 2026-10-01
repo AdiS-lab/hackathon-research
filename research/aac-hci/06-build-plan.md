@@ -125,11 +125,12 @@ haptic_commands_from_host: {SELECTED: short, QUEUED: double, YOUR_TURN: long, ER
 **Feature freeze at hour 18.** Anything that isn't working by then gets cut, in this order: lip reading → person pointing → twist scroll (use click cycling) → tone tilt (use preset buttons).
 
 ## Demo script (90 s, a judge can wear the ring)
-1. **(10 s) Hook:** "Nonspeaking people average about 10–20 words per minute. By the time their sentence is ready, the conversation has moved on. This ring fixes *timing*, not just speed."
-2. **(25 s) Compose:** point at a water bottle, click → `water` tile glows; flick up → `want`; point at a teammate, click → `Sam`. Three candidates appear; twist to choose; tilt to *warm*.
-3. **(20 s) Timing:** the teammate starts talking ("so anyway, the presentation is at…"). The user long-presses → *queued*; the ring buzzes; at the teammate's pause the device says *"Sam, could you grab me some water?"* in a warm voice.
-4. **(10 s) Backchannel:** the teammate jokes; a flick plays a laugh plus "haha, nice" **instantly**.
-5. **(15 s) Judge tries it:** they point at something on their table and build a sentence.
+*(Order changed after 09-critique.md: open with timing, not pointing, so it doesn't look like diaLEX/XAAC.)*
+1. **(10 s) Hook:** "Nonspeaking people don't just talk slowly, they talk *late*: about 10–20 words a minute, so by the time the sentence is ready the conversation has moved on. This ring puts them back on time."
+2. **(10 s) Instant:** the teammate tells a joke; the wearer flicks and a laugh plus "haha, nice" plays **immediately**.
+3. **(25 s) Compose while they talk:** the teammate keeps talking ("so anyway, the presentation is at…"). The wearer points at a water bottle and clicks (`water` tile glows), flicks up (`want`), points at the teammate and clicks (`Sam`). Three candidates appear, shaped by what Sam just said; twist to choose; tilt to *warm*.
+4. **(15 s) On cue:** long-press → *queued*. The partner display shows "✋ composing". At the teammate's pause the ring buzzes and the device says *"Sam, could you grab me some water?"* in a warm voice.
+5. **(20 s) Judge tries it:** they wear the ring, point at something on their table and build a sentence.
 6. **(10 s) Close:** "Each body signal does the part of language it's best at. The AI only does the glue, and the user always approves before anything is spoken."
 
 ## Judge Q&A prep

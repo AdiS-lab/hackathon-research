@@ -28,6 +28,7 @@ caveats:
 | 6 | `06-build-plan.md` | Architecture, BLE protocol, LLM schema, BOM, 24h schedule, demo script, judge Q&A | ready to execute |
 | 7 | `07-risks-ethics.md` | Risk register + ethics + slide text | mitigations |
 | 8 | `08-peripheral-ideas.md` | Adjacent HCI ideas | X6 point-to-control and X2 late-reply anchoring are cheap wins |
+| 9 | `09-critique.md` | Devil's advocate: failure modes, sharper "timing" pitch, names | lead the demo with timing, not pointing |
 | — | `index.json` | Structured version of all of the above | for programmatic consumption |
 
 ## Conventions

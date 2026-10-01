@@ -320,7 +320,8 @@
     "05-tracks.md",
     "06-build-plan.md",
     "07-risks-ethics.md",
-    "08-peripheral-ideas.md"
+    "08-peripheral-ideas.md",
+    "09-critique.md"
   ],
   "caveats": [
     "arxiv/mhacks/fetch.ai/media.mit.edu blocked by proxy; claims from snippets",
@@ -342,5 +343,23 @@
       "prior_art_found": "partial (each piece exists separately)"
     }
   ],
-  "rules_note": "MLH standard: ideas may be pre-planned; project code must be written at the event unless declared existing project; verify MHacks rules"
+  "rules_note": "MLH standard: ideas may be pre-planned; project code must be written at the event unless declared existing project; verify MHacks rules",
+  "pitch": {
+    "thesis": "AAC users don't just talk slowly, they talk late. Make nonspeaking people on time in a conversation.",
+    "pillars": [
+      "Instant: ring-flick backchannels <150ms",
+      "On cue: speak at partner's next pause + haptic 'your turn'",
+      "Fast compose: point + flick + partner context -> 3 candidates, twist to pick, tilt for tone"
+    ],
+    "demo_rule": "open with timing, not pointing (avoid diaLEX/XAAC comparison)",
+    "name_candidates": [
+      "Cue",
+      "Mosaic",
+      "Beat"
+    ],
+    "avoid_names": [
+      "Halo",
+      "Lotus*"
+    ]
+  }
 }
