@@ -336,7 +336,10 @@ Tracks: Education, Healthcare, Sustainability, Blockchain/Security, Entertainmen
 | Hackathon | Year | Project | What Made It Win |
 |-----------|------|---------|-----------------|
 | MHacks | 2023 | DECO.ai | AI + 3D visualization, interior design |
-| MHacks | 2024 | Cosmo Cook (Google) | Gemini AI, cooking assistant, live demo |
+| Google x MHacks AI Hackathon | 2024 (Apr) | Cosmo Cook | Gemini AI, cooking assistant, live demo (separate event, not the MHacks 2024 grand prize) |
+| TreeHacks | 2026 | Shepherd | Motorized smart cane steering blind users; on-device CV + ESP32 actuation |
+| UC Berkeley AI Hackathon | 2026 | Lucid Voice / Theracat | AAC (taps → sentences in own voice) / anxiety-sensing band + plush cat |
+| PennApps | XXVI | ALSistive | Smartwatch tracking ALS progression |
 | TreeHacks | 2024 | Baymax | Physical robot arm, elderly care, coded from scratch |
 | TreeHacks | 2025 | HawkWatch ($11K) | Vision language models + real-time threat detection |
 | Cal Hacks 12 | 2025 | FaceTimeOS | AI agent controlling Mac through conversation, multimodal |
