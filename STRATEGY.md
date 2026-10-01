@@ -1,5 +1,7 @@
 # MHacks 2026 Hackathon Strategy
 
+> **Update (Oct 1, 2026):** the "inferred tracks" below are outdated. Official 2026 tracks, sponsors, judging format and grand-prize patterns are in `research/grand-prize/00-SUMMARY.md`.
+
 ## Inferred 2026 Tracks
 1. Sustainability / Climate
 2. Health / Healthcare
