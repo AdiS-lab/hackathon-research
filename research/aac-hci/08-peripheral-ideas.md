@@ -49,6 +49,13 @@ ideas:
     gist: "Lip-reading or EMG for ~10 high-value words, fused with pointing."
     feasibility_24h: 2
     use_as: "only if a teammate has EMG/VSR experience"
+  - id: X9
+    name: "AAC that also rehabilitates (aphasia naming practice in the real world)"
+    gist: "After the user points at 'water' and the AAC speaks it, an optional 'try saying it' mode gives the evidence-based cueing hierarchy (semantic → phonemic first sound → written word → full model), and ASR checks the attempt."
+    why_interesting: "Naming-therapy apps (Tactus 'Naming Therapy', 'Cue Name') use stock or user photos with a cueing hierarchy. Doing it on live, personally relevant objects at the moment of need is a natural extension. It turns a communication tool into a recovery tool, which is a strong 'Actually Intelligent' story for aphasia."
+    feasibility_24h: 4   # cue generation via LLM + ASR comparison; no new hardware
+    use_as: "P2 feature; or a separate AI-track project if the team prefers health/therapy"
+    prior_art: "Naming Therapy app (photo-based, cueing hierarchy); Cue Name"
   - id: X8
     name: "Personal phrase map (C5)"
     gist: "Embeddings of the scene at each confirmed utterance; later, pointing in the same place surfaces your own past phrases first."
@@ -61,4 +68,4 @@ ideas:
 - **X2 (late-reply anchoring)** costs about 1 hour and answers the "comment appears out of context" problem from COMPA.
 
 ## Sources
-[Prosody transfer (global pitch/loudness)](https://astro.paperswithcode.com/paper/prosody-transfer-in-neural-text-to-speech) · [Prosody & AAC (PMC6802860)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6802860) · [COMPA](https://www.ruofeidu.com/cites/Valencia2024COMPA.html) · [Wait time](https://www.assistiveware.com/blog/dos-and-donts-aac-wait-time) · [Context-aware AAC / ALS fatigue](https://www.scitepress.org/Papers/2014/48842/48842.pdf) · [Partner instruction meta-analysis](https://stars.library.ucf.edu/scopus2015/642) · [Lotus Ring](https://www.podfeet.com/blog/2025/04/ces-2025-lotus/)
+[Prosody transfer (global pitch/loudness)](https://astro.paperswithcode.com/paper/prosody-transfer-in-neural-text-to-speech) · [Prosody & AAC (PMC6802860)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6802860) · [COMPA](https://www.ruofeidu.com/cites/Valencia2024COMPA.html) · [Wait time](https://www.assistiveware.com/blog/dos-and-donts-aac-wait-time) · [Context-aware AAC / ALS fatigue](https://www.scitepress.org/Papers/2014/48842/48842.pdf) · [Partner instruction meta-analysis](https://stars.library.ucf.edu/scopus2015/642) · [Lotus Ring](https://www.podfeet.com/blog/2025/04/ces-2025-lotus/) · [Naming Therapy app](https://apps.apple.com/us/app/naming-therappy/id451093640) · [Tactus naming activities](https://tactustherapy.com/aphasia-activities-naming-therapy/)
