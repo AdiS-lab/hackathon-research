@@ -95,6 +95,21 @@
   ],
   "prior_art": [
     {
+      "name": "diaLEX (Devpost)",
+      "type": "live camera word cards; pointed-at object recognition; AI sentence suggestions",
+      "overlap": "near-identical to original idea"
+    },
+    {
+      "name": "XAAC (Devpost)",
+      "type": "Quest passthrough + Florence-2 + gaze select + Sentence Pot + GPT-2 + TTS",
+      "overlap": "high"
+    },
+    {
+      "name": "AAC automated vocabulary from photographs (CACM highlight)",
+      "type": "photos -> vocabulary",
+      "overlap": "high"
+    },
+    {
       "name": "VocalEyes",
       "type": "point-to-AAC iPad AR",
       "overlap": "high"

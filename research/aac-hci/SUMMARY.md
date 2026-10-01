@@ -7,7 +7,7 @@ decision: "Pivot from 'point at object → word' (already done) to 'Mosaic': mul
 # Summary: what to build at MHacks 2026
 
 ## 1. The original idea, honestly
-- **"Point at an object → AAC word" has been done:** VocalEyes (iPad AR), Microsoft SceneTalk (2017), MIT WatchThis, a US patent (12032807), and Talk For Me (image-recognition suggestions → LLM sentence).
+- **"Point at an object → AAC word" has been done**, including at hackathons. **diaLEX** (Devpost) recognizes *pointed-at* objects and gives AI sentence suggestions. **XAAC** (Devpost) uses Quest passthrough + Florence-2 + gaze-to-select + a sentence builder. Also VocalEyes (iPad AR), Microsoft SceneTalk (2017), MIT WatchThis, a US patent (12032807) and Talk For Me.
 - It also has a **structural flaw**: pointing only gives **nouns (fringe vocabulary)**, while about 200–250 core words (*want, more, not, help, you*) make up about 80% of speech.
 - **Lotus Ring** (point + click IR ring for switching wall switches; for mobility disabilities) is still the right *interaction metaphor*: zero learning curve, eyes-free, one deliberate click.
 
