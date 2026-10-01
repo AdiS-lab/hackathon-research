@@ -38,7 +38,7 @@ decision: "Pivot from 'point at object → word' (already done) to 'Mosaic': mul
 ## 5. Do this today (Oct 1–2), because MHacks starts Oct 3
 1. **Order hardware now:** 2× Seeed XIAO nRF52840 Sense, a small LiPo, tactile switches, a coin vibration motor + transistor (or DRV2605L), finger straps. **Backup:** a BLE "TikTok remote ring" (next-day). **Zero-hardware fallback:** phone on the wrist (camera + DeviceMotion IMU).
 2. **Get API keys:** one fast LLM, one expressive TTS (e.g., ElevenLabs Flash v2.5 / v3).
-3. **Pre-hackathon spikes (legal per most rules; check the MHacks rules on pre-written code):** Web Bluetooth ↔ XIAO hello-world; `@ricky0123/vad-web` pause detection; MediaPipe object detector in the browser.
+3. **Pre-hackathon learning spikes:** Web Bluetooth ↔ XIAO hello-world; `@ricky0123/vad-web` pause detection; MediaPipe object detector in the browser; Cartesia/ElevenLabs TTS call. ⚠️ Standard MLH rules allow pre-planned *ideas* and public libraries, but **not** project code written beforehand (unless declared as an existing project with new work shown). Keep the spikes as throwaway learning, write the real repo at the event, and check the MHacks-specific rules.
 4. **Decide the team split:** HW / Vision / Compose+Speech+Turn / UI+Demo (see 06-build-plan.md).
 5. **Confirm on-site:** whether Snap Spectacles or other hardware loaners exist; the final sponsor prizes; bonus-track submission rules.
 

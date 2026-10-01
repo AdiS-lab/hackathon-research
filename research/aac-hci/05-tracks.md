@@ -65,7 +65,7 @@ LLM judges (for example Devfolio's "Discerning Machine") read the **submission t
 - Accessibility wearables have won at MHacks before (WiLi Watch 2024, Gestura 2025, ScreenWave 2025, Dementia Assistant 2025).
 
 ## Sponsor prizes worth checking on-site (UNVERIFIED for 2026; from search snippets)
-- **Snap AR / Spectacles** prize: historically present. If Spectacles loaners exist, a ray-pointing version could compete here too.
+- **Snap AR / Spectacles** prize: historically present. Search snippets mention a Snap pre-hackathon workshop at MHacks ("Building Your First AI-Powered AR Companion on Snapchat Spectacles"), year unclear. If Spectacles loaners exist, a ray-pointing version could compete here too.
 - **Fetch.ai** prizes ($1,250 Best Use of Fetch.ai; $750 Agentverse; $500 ASI:One per snippet). You could wrap the composer as an agent, but only if it doesn't distract.
 - Snippets also mention a Meta x Oakley glasses prize and an NVIDIA Jetson prize, **likely tied to 2025 track names**. Verify.
 

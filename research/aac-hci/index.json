@@ -163,6 +163,11 @@
       "name": "Backchanneling in AAC (2025)",
       "type": "design recs",
       "overlap": "low (evidence)"
+    },
+    {
+      "name": "Expressive objects 'sidekick' (ASSETS'21)",
+      "type": "physical flag robot signals composing / hold-on",
+      "overlap": "med (floor-hold cue)"
     }
   ],
   "concepts": [
@@ -281,7 +286,7 @@
     "partner_stt": "Web Speech API; fallback Whisper/realtime API",
     "pause_detection": "@ricky0123/vad-web onSpeechEnd + 500-700ms hangover",
     "llm": "fast-tier model, JSON output, streaming; template fallback",
-    "tts": "ElevenLabs Flash v2.5 (speed) / v3 audio tags (tone); fallback speechSynthesis"
+    "tts": "Cartesia Sonic 3 (emotion/speed/volume generation_config; fits a physical tone dial) | ElevenLabs Flash v2.5 / v3 tags | gpt-4o-mini-tts instructions; fallback speechSynthesis"
   },
   "latency_budget_ms": {
     "ring_to_ui": 50,
@@ -306,5 +311,21 @@
     "arxiv/mhacks/fetch.ai/media.mit.edu blocked by proxy; claims from snippets",
     "2026 sponsor prizes unverified",
     "no user testing"
-  ]
+  ],
+  "novelty_claims": [
+    {
+      "claim": "Speak-at-next-pause: AAC output auto-timed to partner's turn boundary",
+      "prior_art_found": false,
+      "searches": 2
+    },
+    {
+      "claim": "Physical tone dial mapped to expressive TTS on a ring",
+      "prior_art_found": "partial (Expressive Keyboard, Monarch AAC: on-screen)"
+    },
+    {
+      "claim": "Fusion of point + gesture + partner speech into confirm-before-speak candidates",
+      "prior_art_found": "partial (each piece exists separately)"
+    }
+  ],
+  "rules_note": "MLH standard: ideas may be pre-planned; project code must be written at the event unless declared existing project; verify MHacks rules"
 }

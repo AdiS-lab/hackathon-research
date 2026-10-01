@@ -57,7 +57,7 @@ ideas:
 ```
 
 ## Most promising peripheral ideas for the demo
-- **X6 (point-to-control)** is the cheapest big wow: point at a lamp, click, and the lamp turns on *and* the device says "Can you leave the light on?" or simply acts. It ties directly to the Lotus Ring inspiration and makes the hardware track story concrete. A Wi-Fi smart plug with a local HTTP API (e.g., a Tasmota/Shelly-type plug; verify the model has a local API) or an IR LED on the ring.
+- **X6 (point-to-control)** is the cheapest big wow: point at a lamp, click, and the lamp turns on *and* the device says "Can you leave the light on?" or simply acts. It ties directly to the Lotus Ring inspiration and makes the hardware track story concrete. A Wi-Fi smart plug with a local HTTP API: Shelly Gen1-style devices accept `http://<ip>/relay/0?turn=on|off|toggle` with no cloud needed. Gen2+ devices use an RPC API, so check the exact model. Bring your own travel router because venue Wi-Fi often isolates clients. Or use an IR LED on the ring, like Lotus.
 - **X2 (late-reply anchoring)** costs about 1 hour and answers the "comment appears out of context" problem from COMPA.
 
 ## Sources
