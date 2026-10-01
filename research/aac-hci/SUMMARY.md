@@ -12,7 +12,7 @@ decision: "Pivot from 'point at object → word' (already done) to 'Mosaic': mul
 - **Lotus Ring** (point + click IR ring for switching wall switches; for mobility disabilities) is still the right *interaction metaphor*: zero learning curve, eyes-free, one deliberate click.
 
 ## 2. The problem is valid. The best-supported pain is *timing*, not just speed
-- AAC runs at about 10–20 wpm compared with 130–200 wpm for speech (MED).
+- AAC runs at about 12–18 wpm compared with 125–185 wpm for speech; scanning is 2–7 wpm (MED-HIGH, peer-reviewed snippets). Conversation turn gaps are a fraction of a second (Stivers 2009).
 - CHI '25 (*Why So Serious?*): jokes and comments land too late; users **trade agency for timing** (HIGH).
 - 2025 backchanneling paper: AAC needs eyes-on-screen; users lose "mm-hmm" and nonverbal cues (HIGH).
 - Tone of voice is "all but absent" from AAC R&D (MED).
@@ -27,8 +27,10 @@ decision: "Pivot from 'point at object → word' (already done) to 'Mosaic': mul
 - **Twist** = choose; **tilt** = tone (warm/urgent/playful → expressive TTS tags).
 - **Hold-click = speak at the partner's next pause** (no prior art found for timing AAC *output* to a turn boundary). The ring buzzes when it's your turn.
 - **Instant backchannels** (<150 ms, no LLM): mm-hmm, haha, wait, yes, no.
-- **Partner display:** tiles forming plus "✋ composing…" (builds in expectant delay; inspired by COMPA, CHI '24).
+- **Partner display:** tiles forming plus "✋ composing…" (builds in expectant delay; inspired by COMPA, CHI '24, and the ASSETS '21 "sidekick" flag robot whose timer motion signaled *composing*).
 - Cheap wow add-ons: **point at a lamp → it actually turns on** (Lotus-style control) and **late-reply anchoring** ("Going back to the pizza thing:").
+
+**Pitch it timing-first** (see 09-critique.md): *"AAC users don't just talk slowly, they talk late."* Open the demo with the instant laugh and the on-cue sentence, **not** with pointing (diaLEX/XAAC already did that). Name candidates: **Cue** (timing-first) or **Mosaic** (fusion-first).
 
 ## 4. Tracks
 - **Main:** *Beyond the Code (Hardware)* if you build the XIAO ring; otherwise *Actually Intelligent (AI)*. One main track only.
@@ -37,7 +39,7 @@ decision: "Pivot from 'point at object → word' (already done) to 'Mosaic': mul
 
 ## 5. Do this today (Oct 1–2), because MHacks starts Oct 3
 1. **Order hardware now:** 2× Seeed XIAO nRF52840 Sense, a small LiPo, tactile switches, a coin vibration motor + transistor (or DRV2605L), finger straps. **Backup:** a BLE "TikTok remote ring" (next-day). **Zero-hardware fallback:** phone on the wrist (camera + DeviceMotion IMU).
-2. **Get API keys:** one fast LLM, one expressive TTS (e.g., ElevenLabs Flash v2.5 / v3).
+2. **Get API keys:** one fast LLM and one expressive TTS. **Cartesia Sonic 3** maps best to a physical tone dial (emotion + speed + volume params, low latency); ElevenLabs or OpenAI gpt-4o-mini-tts are alternatives.
 3. **Pre-hackathon learning spikes:** Web Bluetooth ↔ XIAO hello-world; `@ricky0123/vad-web` pause detection; MediaPipe object detector in the browser; Cartesia/ElevenLabs TTS call. ⚠️ Standard MLH rules allow pre-planned *ideas* and public libraries, but **not** project code written beforehand (unless declared as an existing project with new work shown). Keep the spikes as throwaway learning, write the real repo at the event, and check the MHacks-specific rules.
 4. **Decide the team split:** HW / Vision / Compose+Speech+Turn / UI+Demo (see 06-build-plan.md).
 5. **Confirm on-site:** whether Snap Spectacles or other hardware loaners exist; the final sponsor prizes; bonus-track submission rules.
