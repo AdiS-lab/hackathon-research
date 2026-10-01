@@ -12,8 +12,8 @@ confidence_legend: "HIGH = primary/peer-reviewed source seen in search snippet; 
 verdict: VALID_PROBLEM
 strongest_pain_points:
   - id: P1_rate_gap
-    claim: "AAC users communicate at ~10-20 wpm vs ~130-200 wpm natural speech"
-    confidence: MED
+    claim: "AAC users communicate at ~12-18 wpm vs ~125-185 wpm natural speech (citing Higginbotham et al.); direct selection 5-15 wpm, scanning 2-7 wpm"
+    confidence: MED-HIGH   # peer-reviewed snippets, consistent across sources
   - id: P2_timing
     claim: "Messages arrive too late; conversation moves on; jokes/backchannels die. AAC users will trade some authorship for speed when timing matters."
     confidence: HIGH   # CHI'25 'Why So Serious?' + 2025 backchanneling paper
@@ -36,7 +36,9 @@ population:
 ```
 
 ## 1. The communication-rate gap (P1)
-- Typical AAC device output is about **10 wpm** compared with 130–200 wpm for speakers. Another commonly quoted range is AAC at **10–20 wpm** against **140–150 wpm** conversational speech. A 2023 study using fine-tuned RoBERTa language models on AAC corpora reached about **25.75 wpm**, which is still far below speech.
+- Peer-reviewed literature (citing Higginbotham et al.): AAC users communicate at about **12–18 wpm** compared with **125–185 wpm** for speakers. Direct-selection techniques run at **5–15 wpm** and **scanning at 2–7 wpm**.
+- Meanwhile, conversation itself is fast: Stivers et al. (2009, PNAS, 10 languages) found that all languages **avoid overlap and minimize silence between turns**, with language means within about 250 ms of the cross-language mean. A 30-second AAC composition is roughly two orders of magnitude slower than the turn window.
+- Typical AAC device output is also quoted as about **10 wpm** compared with 130–200 wpm for speakers. Another commonly quoted range is AAC at **10–20 wpm** against **140–150 wpm** conversational speech. A 2023 study using fine-tuned RoBERTa language models on AAC corpora reached about **25.75 wpm**, which is still far below speech.
 - Google's **SpeakFaster** (Nature Communications, Nov 2024) used fine-tuned LLMs and conversational context to expand abbreviations. Text-entry rates were **29–60% above baseline** for two eye-gaze users with ALS, with **57% motor-action savings** in simulation.
 - **Implication for us:** LLMs measurably speed up AAC, so the "AI actually solves a real problem" story (the Actually Intelligent track) has peer-reviewed support.
 
@@ -75,6 +77,8 @@ population:
 
 ## Sources
 - AAC rate stats: [RESNA 2008 Romich](https://resna.org/sites/default/files/legacy/conference/proceedings/2008/CAC/Romich.html), [Sheffield 2023 poster (RoBERTa 25.75 wpm)](https://staffwww.dcs.shef.ac.uk/people/S.Goetze/papers/2023_Yusufali_UK_Speech_Conference_2023_Poster.pdf), [White Rose eprint 201253](https://eprints.whiterose.ac.uk/id/eprint/201253)
+- Peer-reviewed rate ranges: [Why So Serious? (cites Higginbotham)](https://arxiv.org/pdf/2410.16634), [U Alberta ERA thesis](https://era.library.ualberta.ca/items/a1918679-830a-4a00-8174-baa4a14f8b72/download/8e14d1a4-9410-49e4-8fe5-bc4c48be6735), [Pickering et al. 2019](https://tamuc.edu/wp-content/uploads/2021/08/13571266-pickering-et-al_2019.pdf)
+- Turn-taking universals: [Stivers et al. 2009 PNAS (MPI)](https://forms.mpi.nl/node/50939), [EMCA wiki](https://emcawiki.net/Stivers-etal2009)
 - SpeakFaster: [Nature Comms / PMC11530652](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11530652/), [Google Research blog](https://research.google/blog/speakfaster-revolutionizing-communication-for-people-with-severe-motor-impairments/)
 - Timing/humor: [arXiv 2410.16634](https://arxiv.org/pdf/2410.16634), [Cornell news](https://news.cornell.edu/stories/2025/05/ai-tools-help-people-speech-disabilities-make-timely-jokes)
 - Backchanneling: [arXiv 2506.17890](https://arxiv.org/abs/2506.17890v1)
