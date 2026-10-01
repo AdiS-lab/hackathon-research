@@ -70,6 +70,7 @@ note: "Recommendation: build C1 using C2's timing features as the headline diffe
 | Lingraphica Conversations | partner STT → reply suggestions on a tablet | eyes-free ring, combined fragments, tone, timing-aware delivery |
 | AllyAAC | wrist IMU gestures → phrases | gesture is one input among several, not the whole vocabulary |
 | SpeakFaster | LLM abbreviation expansion for gaze typing | no typing at all; physical-world tokens |
+| COMPA (CHI '24) | Google Meet extension: context marking, partner notifications, LLM starters | in-person and physical; the *output* is timed to the partner's pause; tone; eyes-free |
 
 **Track fit:** Beyond the Code (ring, sensors, haptics) *or* Actually Intelligent (multimodal fusion, LLM). See 05-tracks.md.
 

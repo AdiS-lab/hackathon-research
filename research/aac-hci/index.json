@@ -1,0 +1,310 @@
+{
+  "schema": "aac-hci-research/v1",
+  "generated": "2026-10-01",
+  "event": {
+    "name": "MHacks 2026",
+    "dates": "2026-10-03/2026-10-04",
+    "location": "Ann Arbor, MI",
+    "confidence": "MED"
+  },
+  "tracks": {
+    "rule": "exactly one main track; any number of applicable bonus tracks",
+    "main": [
+      {
+        "id": 1,
+        "name": "Sustainability",
+        "fit": 1
+      },
+      {
+        "id": 2,
+        "name": "Actually Intelligent (AI)",
+        "fit": 5
+      },
+      {
+        "id": 3,
+        "name": "FinTech",
+        "fit": 1
+      },
+      {
+        "id": 4,
+        "name": "Beyond the Code (Hardware)",
+        "fit": 5
+      }
+    ],
+    "bonus": [
+      {
+        "id": 5,
+        "name": "Useless AI",
+        "fit": 1
+      },
+      {
+        "id": 6,
+        "name": "Dumbest Idea",
+        "fit": 1
+      },
+      {
+        "id": 7,
+        "name": "Judged by an LLM",
+        "fit": 5
+      }
+    ],
+    "recommendation": {
+      "main_if_custom_ring": 4,
+      "main_if_offshelf_or_phone": 2,
+      "bonus": [
+        7
+      ]
+    }
+  },
+  "verdicts": {
+    "original_idea_point_to_word": "ALREADY_DONE",
+    "aac_is_valid_problem": true,
+    "top_pain_point": "timing (messages land late; backchannels lost)"
+  },
+  "pain_points": [
+    {
+      "id": "P1_rate_gap",
+      "claim": "AAC ~10-20 wpm vs ~130-200 wpm speech",
+      "confidence": "MED"
+    },
+    {
+      "id": "P2_timing",
+      "claim": "late messages; users trade agency for timing",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P3_tone",
+      "claim": "flat synthetic voices; little tone control",
+      "confidence": "MED"
+    },
+    {
+      "id": "P4_abandonment",
+      "claim": "~39% of SLP-introduced devices used >1 year",
+      "confidence": "MED"
+    },
+    {
+      "id": "P5_core_vs_fringe",
+      "claim": "200-250 core words ~80% of speech; pointing yields only fringe nouns",
+      "confidence": "MED"
+    },
+    {
+      "id": "P6_attention",
+      "claim": "AAC demands visual attention; partner cues missed",
+      "confidence": "HIGH"
+    }
+  ],
+  "prior_art": [
+    {
+      "name": "VocalEyes",
+      "type": "point-to-AAC iPad AR",
+      "overlap": "high"
+    },
+    {
+      "name": "SceneTalk (MSR 2017)",
+      "type": "gaze + CV scene AAC",
+      "overlap": "high"
+    },
+    {
+      "name": "WatchThis (MIT)",
+      "type": "pointing watch camera Q&A",
+      "overlap": "med"
+    },
+    {
+      "name": "US12032807",
+      "type": "AAC + camera object words patent",
+      "overlap": "high"
+    },
+    {
+      "name": "Talk For Me",
+      "type": "grid + image rec + LLM sentence",
+      "overlap": "med"
+    },
+    {
+      "name": "Lotus Ring",
+      "type": "IR point-and-click environmental control",
+      "overlap": "metaphor only"
+    },
+    {
+      "name": "SpeakFaster (Google)",
+      "type": "LLM abbreviation expansion",
+      "overlap": "low"
+    },
+    {
+      "name": "Lingraphica Conversations",
+      "type": "partner STT -> AI replies (commercial 2026)",
+      "overlap": "med"
+    },
+    {
+      "name": "COMPA (CHI'24)",
+      "type": "Meet extension: context marking, partner notifications",
+      "overlap": "med"
+    },
+    {
+      "name": "AllyAAC",
+      "type": "wrist IMU personalized gestures",
+      "overlap": "med"
+    },
+    {
+      "name": "Gesture-aware zero-shot ASR (2502.13983)",
+      "type": "speech+gesture intent fusion for aphasia",
+      "overlap": "med"
+    },
+    {
+      "name": "AlterEgo",
+      "type": "sEMG silent speech",
+      "overlap": "low"
+    },
+    {
+      "name": "Why So Serious? (CHI'25)",
+      "type": "AI humor timing in AAC",
+      "overlap": "low (evidence)"
+    },
+    {
+      "name": "Backchanneling in AAC (2025)",
+      "type": "design recs",
+      "overlap": "low (evidence)"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "C1",
+      "name": "Mosaic",
+      "recommended": true,
+      "weighted": 4.55,
+      "scores": {
+        "novelty": 4,
+        "problem_validity": 5,
+        "demo_wow": 5,
+        "buildability_24h": 4,
+        "track_fit": 5
+      },
+      "channels_P0": [
+        "ring_click",
+        "ring_imu_gestures",
+        "point_object",
+        "partner_stt",
+        "tone_dial",
+        "partner_display"
+      ],
+      "channels_P1": [
+        "speak_at_next_pause",
+        "haptics",
+        "point_person",
+        "late_reply_anchoring",
+        "point_to_control_lamp"
+      ],
+      "channels_P2": [
+        "partial_vocalization",
+        "lip_reading",
+        "ar_glasses"
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "Cue",
+      "weighted": 4.65,
+      "note": "timing-first subset of C1; fallback if vision fails",
+      "scores": {
+        "novelty": 5,
+        "problem_validity": 5,
+        "demo_wow": 4,
+        "buildability_24h": 5,
+        "track_fit": 4
+      }
+    },
+    {
+      "id": "C3",
+      "name": "Two-Way",
+      "weighted": 4.25,
+      "note": "partner-side AI; use as a feature",
+      "scores": {
+        "novelty": 5,
+        "problem_validity": 4,
+        "demo_wow": 3,
+        "buildability_24h": 5,
+        "track_fit": 4
+      }
+    },
+    {
+      "id": "C4",
+      "name": "Mouthpiece",
+      "weighted": 3.8,
+      "note": "silent speech; only with EMG/VSR experience",
+      "scores": {
+        "novelty": 4,
+        "problem_validity": 4,
+        "demo_wow": 5,
+        "buildability_24h": 2,
+        "track_fit": 4
+      }
+    },
+    {
+      "id": "C5",
+      "name": "Here",
+      "weighted": 3.25,
+      "note": "spatial phrase memory; stretch",
+      "scores": {
+        "novelty": 4,
+        "problem_validity": 3,
+        "demo_wow": 3,
+        "buildability_24h": 3,
+        "track_fit": 3
+      }
+    }
+  ],
+  "score_weights": {
+    "novelty": 0.25,
+    "problem_validity": 0.2,
+    "demo_wow": 0.2,
+    "buildability_24h": 0.2,
+    "track_fit": 0.15
+  },
+  "hardware_bom": {
+    "tier_A": [
+      "2x Seeed XIAO nRF52840 Sense",
+      "3.7V LiPo 40-150mAh JST-PH",
+      "6mm tactile switch",
+      "coin vibration motor + NPN + diode (or DRV2605L)",
+      "finger strap / 3D-printed shell",
+      "phone or USB webcam on wrist"
+    ],
+    "tier_B": [
+      "BLE TikTok/Kindle remote ring (HID, no IMU)"
+    ],
+    "tier_C": [
+      "phone on wrist: camera + DeviceMotion IMU + on-screen button"
+    ]
+  },
+  "stack": {
+    "ring_link": "Web Bluetooth (Chrome) <-> ArduinoBLE notify",
+    "vision": "MediaPipe Object Detector (EfficientDet-Lite) on center crop; VLM fallback",
+    "partner_stt": "Web Speech API; fallback Whisper/realtime API",
+    "pause_detection": "@ricky0123/vad-web onSpeechEnd + 500-700ms hangover",
+    "llm": "fast-tier model, JSON output, streaming; template fallback",
+    "tts": "ElevenLabs Flash v2.5 (speed) / v3 audio tags (tone); fallback speechSynthesis"
+  },
+  "latency_budget_ms": {
+    "ring_to_ui": 50,
+    "backchannel": 150,
+    "point_to_highlight": 400,
+    "first_candidate": 1200,
+    "confirm_to_audio": 500
+  },
+  "files": [
+    "00-INDEX.md",
+    "SUMMARY.md",
+    "01-problem-validation.md",
+    "02-prior-art.md",
+    "03-hci-modalities.md",
+    "04-concepts.md",
+    "05-tracks.md",
+    "06-build-plan.md",
+    "07-risks-ethics.md",
+    "08-peripheral-ideas.md"
+  ],
+  "caveats": [
+    "arxiv/mhacks/fetch.ai/media.mit.edu blocked by proxy; claims from snippets",
+    "2026 sponsor prizes unverified",
+    "no user testing"
+  ]
+}

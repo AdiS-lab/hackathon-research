@@ -137,6 +137,7 @@ haptic_commands_from_host: {SELECTED: short, QUEUED: double, YOUR_TURN: long, ER
 |---|---|
 | "Hasn't pointing-to-AAC been done?" | Yes (VocalEyes, SceneTalk). Pointing only covers nouns (fringe). Our contribution is fusing 4 channels with **timing-aware delivery** and **eyes-free backchannels**, which the research identifies as the unmet need |
 | "Isn't the AI putting words in their mouth?" | Nothing is spoken without a click. The literal minimal sentence is always option 2. Style examples keep their voice. We cite "The less I type, the better" and the CHI '25 findings on the agency vs. timing tradeoff |
+| "How is this different from COMPA / Lingraphica Conversations?" | Both are screen-based (Meet extension / tablet app). We're in-person, eyes-free and physical: world objects and gestures as input, the ring as the only control, output timed to the partner's pause, and tone control. We cite COMPA as the inspiration for partner notifications |
 | "Who is this actually for?" | People who can move and vocalize but can't produce reliable speech: aphasia, nonspeaking autism, apraxia. Not late-stage ALS (gaze and BCI fit better) |
 | "Privacy, with an always-on camera and mic?" | Camera frames only on click; partner audio processed for context and never stored; a local detector is the first choice |
 | "Latency?" | Show the live overlay and `bench/latency.json` |
