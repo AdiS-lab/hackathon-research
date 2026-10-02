@@ -45,7 +45,7 @@ Score: **about 70/100 as written → about 84 with the fixes** (details in `02-j
 | 3 | **One-handed design:** ring on the left index finger, tablet on a stand, and say so in the pitch. | 15 min | Most users have a weak right side |
 | 4 | **End-of-turn model, not only VAD** (Smart Turn v3, about 8M params, about 20–36 ms on a laptop CPU), plus a **"turn ending… → your turn"** meter on the partner screen. | 2–3 h | Interruptions are worse than lateness |
 | 5 | **Pre-render TTS at approval time**, so the pause only triggers local playback. Add a **relevance gate**: buzz and hold if the partner changed topic. | ~1 h | Gets reliably under 700 ms; "Cue knows when not to talk" |
-| 6 | **One transport: everything over Wi-Fi WebSocket.** Drop Web Bluetooth (it doesn't work in iPad Safari). Serve the UI from `http://localhost` to avoid mixed-content blocks. | saves time | Fewer demo failure modes |
+| 6 | **The XIAO won't arrive, so build a wired ring from the MLH lab:** Grove button on a finger loop + Arduino over **Web Serial** + Logitech webcam on the back of the hand. See `04-hardware-without-xiao.md`. | ~2 h | Fewer failure modes than Wi-Fi/BLE |
 
 Optional (+1 h): **"cue me" mode**. When you point at an object, Cue plays only the first sound ("wuh…") so your own word can come back, and one more click speaks it. It ties the name to aphasia therapy and answers the authorship worry. See `03-deeper-meaning.md` §3.
 
@@ -65,9 +65,11 @@ Cut from the pitch (keep in the repo if built): Photon private send, the AR upgr
 - [ ] Download the **Smart Turn v3 ONNX** weights (open-source, public). That's allowed; writing project code in advance isn't.
 - [ ] Bring **one earbud** (whisper preview), a **lapel mic** for the partner, a **phone stand** for the tablet, a **travel router**, and a lamp + FREE-WiLi if available.
 - [ ] Have the poster plot ready: x = reply gap (0–15 s), y = perceived willingness (Roberts 2006 trend), with **Cue** and **tap-board** markers filled in at hour 18.
-- [ ] Decide whether the repo stays **public**. It's already indexed by search engines.
+- [ ] **Buy a presentation clicker** (Best Buy/Target/Staples, ~$25) Saturday morning as insurance for the ring.
+- [ ] At check-in, **go to the MLH hardware lab first**: Grove buttons, an Arduino + base shield, a Grove buzzer and a Logitech webcam go fast.
 
-## Questions only you can answer
-1. Is the "tablet" an **iPad**? If yes, Web Bluetooth won't work there, which is one more reason for Wi-Fi only.
-2. Did the **XIAO ESP32S3 Sense** order actually ship for Saturday delivery?
-3. Does anyone on the team know someone with aphasia or an SLP? Ten minutes of feedback beats every citation in this folder.
+## Your answers (Oct 2)
+- **"Tablet" = a laptop.** Chrome on the laptop handles Web Serial, the camera and audio. Use a second device (teammate laptop or phone browser) as the partner display.
+- **XIAO hasn't shipped** → wired ring from the MLH lab (plan in `04-hardware-without-xiao.md`). The timing demo doesn't depend on it.
+- **Repo is private.** Good. (It showed up in search results earlier, so it was probably public at some point; nothing to do now.)
+- **No AAC/SLP contact yet** → the UMAP email (ucll@umich.edu) is the one outreach worth doing tonight. On-site, ask organizers and the judges' table whether anyone has clinical or AAC experience. Until then say "not yet tested with users", honestly.

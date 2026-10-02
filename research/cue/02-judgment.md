@@ -61,7 +61,7 @@ Silero VAD only knows *silence*, not *turn end*. People pause mid-sentence for 3
 You queue "Yes, I'd love pizza." The partner keeps talking: "…actually, let's do sushi instead." Firing the old line now is wrong *and* on time.
 **Fix (1 hour):** a **relevance gate**. When the turn ends, run one fast check (a heuristic: new question detected, or a cheap LLM yes/no) on "Does the queued reply still answer the last turn?" If not, **buzz twice and hold** instead of speaking. Also offer an anchor prefix for late replies: "Going back to the pizza: …". This is a nice moment to show judges deliberately: "Cue knows when *not* to talk."
 
-### P6: The hardware and browser plan has two traps (MED)
+### P6: The hardware and browser plan has two traps (MED). *Update: mostly moot. The tablet is a laptop and the XIAO isn't coming; see `04-hardware-without-xiao.md`*
 1. **Web Bluetooth does not work in Safari on iPad/iOS** (any version). If "tablet" means iPad, BLE button events fail. **Fix:** drop BLE. The ESP32S3 is already on Wi-Fi, so send **everything (frames + button events + haptic commands) over one WebSocket**. One transport, one failure mode. Run the UI in Chrome on the laptop or an Android tablet.
 2. **Mixed content:** a page served over `https://` (e.g. deployed to Vercel) can't open `ws://192.168.x.x`. **Fix:** serve the UI from `http://localhost` during the demo, or relay through a local Node server.
 3. **Camera sensor:** newer XIAO ESP32S3 Sense boards ship with an **OV3660**, not an OV2640, and most example code assumes the OV2640. Check the sensor PID on first boot and keep both configs ready.
@@ -94,5 +94,5 @@ CUE.md lists object naming, core words, LLM composition, queued speech, backchan
 
 ## 5. What would make me change the verdict
 - **Pause detection can't be made reliable in the hall by hour 14** → keep it in the demo with a lapel mic and the visible "turn ending…" meter. If it's still bad, demo "speak now" plus backchannels, and show the queue on a recorded clip with an honest label. Don't abandon the thesis.
-- **The ring hardware doesn't arrive** → webcam on a lanyard (as planned) plus a **BLE/USB clicker** or a laptop key as the "ring". The timing thesis doesn't need the camera at all.
-- **A judge has seen a timing-first AAC hack this season** → nothing found as of Oct 2, 2026 (4 searches). Note that **this repo is public and already indexed by search engines** (PR #1 appeared in my results); consider making it private until submission if that worries you.
+- **The ring hardware doesn't arrive** → *confirmed: it won't.* Wired Grove-button ring + Arduino (Web Serial) + Logitech webcam on the hand, all from the MLH lab; a presentation clicker as insurance. See `04-hardware-without-xiao.md`. The timing thesis doesn't need the camera at all.
+- **A judge has seen a timing-first AAC hack this season** → nothing found as of Oct 2, 2026 (4 searches).
