@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.rte.ie)"
+      "WebFetch(domain:www.rte.ie)",
+      "WebSearch"
     ]
   }
 }
