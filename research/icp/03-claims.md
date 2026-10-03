@@ -1,6 +1,6 @@
 ---
 doc: cue-claims-ledger
-status: v2 (round 2 verification pass, 2026-10-03 ~01:15 EDT)
+status: v3 (round 3 red team, 2026-10-03 ~02:00 EDT)
 scope: "Every claim the Cue pitch could make, from ALL evidence docs in this repo, tied to sources and graded."
 source_docs:
   - research/icp/01-evidence.md          # ICP: clinical, severity, conversation, pointing, abandonment
@@ -87,12 +87,14 @@ If a judge attacks one branch, defend it with that branch's rows. If a branch ha
 | CONV15 | AAC devices demand visual attention, so users miss partners' faces and nonverbal cues. | Backchanneling in AAC, 2025 (exploratory, 4 users + 4 SLPs) | aac-hci/01 P6; cue/01 C1 | MED (small n) | Q&A ("an exploratory study") | Ring = eyes up |
 | CONV16 | AAC users will trade control for timing when timing matters. | "Why So Serious?" CHI '25 (7 users) | cue/01 A5 | MED-HIGH | USE (note small n if asked) | Ethics answer |
 | CONV17 | People with aphasia are less likely to anticipate turn transitions: predicting a turn end relies on lexical and syntactic content, which aphasia disrupts (eye-tracking during video conversations). | Preisig et al. 2016, *J Cogn Neurosci* 28(10) | 02-applications §2.18 | MED (lab study, small n) | Q&A | Why Cue detects the turn end for him *(round 2: new)* |
+| CONV18 | Doing two things at once costs people with aphasia more: dual-task conditions raise word-production errors more than in controls, and even healthy listeners attend less to speech while planning a reply. | Dual-task aphasia studies (UNIGE; JSLHR 2019, 2025); listening-while-planning work | 04-red-team R1 | MED-HIGH | Q&A (it's a risk we name) | Why floor-hold is half the core *(round 3: new)* |
 
 ## 4. Why the alternatives don't fix it
 
 | ID | Claim | Source | Repo doc | Strength | Status | Used in |
 |---|---|---|---|---|---|---|
 | ALT1 | Texting success in chronic aphasia tracks severity and reading/writing deficits, not confidence or how often people text (n = 20). | AJSLP 2022 texting transactional-success study; Kinsey et al. 2021 | 02-applications §2.1 | MED-HIGH | Q&A | "Why not text?" |
+| ALT1b | People with aphasia do text, with wide variation (20 people: about 15 texts sent per week on average); texting amount didn't correlate with aphasia severity. | Kinsey, Lee, Larkin & Cherney 2021 (ASHA) | 04-red-team R12 | MED | Q&A | Keeps the texting answer honest *(round 3: new)* |
 | ALT2 | Speech recognition fails on aphasic speech: ~61–70% word error rate off the shelf, ~32–36% after fine-tuning (AphasiaBank). | UNIR Whisper/Wav2Vec study; Imperial "When Whisper listens to aphasia" | 02-applications §2.3 | MED-HIGH | Q&A | "Why not Siri?" |
 | ALT3 | Paged (multi-page) layouts slow selection: 133 vs 193 symbols in 20 min on the first trial vs a single page. | RESNA 2016 (Anson, layout study) | 02-applications §2.2 | MED (not aphasia-specific) | Q&A | Ring vs tablet |
 | ALT4 | People with aphasia navigate scene-based displays more accurately and faster than grids, with fewer eye fixations (n = 21 eye-tracking). | Pitt/ASHA VSD studies (Brock et al.; Thiessen et al.) | 02-applications §2.2 | MED-HIGH | Q&A | Vocabulary from the real scene |
@@ -139,6 +141,15 @@ If a judge attacks one branch, defend it with that branch's rows. If a branch ha
 | X11 | "OV2640" camera | New XIAO boards ship OV3660 (moot: XIAO isn't coming) | Check sensor ID if Plan C | CUE.md |
 | X12 | Any measured result before we measure it | — | Fill reply-gap numbers at hour 18 | everywhere |
 | X13 | "67% abandoned AAC because vocabulary didn't match daily life (n = 275)" | No primary found; the n = 275 study surveyed **SLPs**, not users, and reports factors, not this percentage | ALT6 wording | icp/01 E1 (fixed) |
+
+## 7b. Assumptions we rely on but haven't proven (round 3 red team)
+
+| ID | Assumption | Why it matters | Risk if wrong | What we say |
+|---|---|---|---|---|
+| ASM1 | Listeners hear a late reply from an AAC user the way they hear a late reply from a speaker (CONV2–CONV4 were measured on typical speakers). | It's the bridge from the timing science to Ray | The "reluctant yes" line weakens; the "conversation moves on" harm (CONV9–CONV11, SEV3) still stands | Word the science as "for typical speakers"; lead with the harm, not the curve |
+| ASM2 | Ray can point/tap to compose while still following the partner. | Core mechanism #1 | He misses what's said (CONV18) | Floor-hold (#2) covers it; first thing to test with UMAP |
+| ASM3 | End-of-turn detection works well enough in real rooms. | Mechanism #1 | Interruptions in groups | Demo is one partner; in groups floor-hold is the reliable tool |
+| ASM4 | Pointing + one tap is a lighter load than speaking. | Makes ASM2 plausible | Composing is as hard as talking | Say "hypothesis", never "finding" |
 
 ## 8. Gaps: claims we'd like but don't have yet
 1. A direct measurement of **reply gaps in aphasia conversation** (how long people with aphasia actually take to respond in natural talk). Searched indirectly; not found as a single number. We use AAC wait-time guidance (CONV7) instead.

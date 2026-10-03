@@ -99,13 +99,14 @@ Each requirement exists because of a documented fact about this ICP. If a judge 
 |---|---|
 | **Ring on the LEFT index finger; everything one-handed.** Laptop on a stand, big targets. | Most people with post-stroke aphasia have right-side weakness (about 61% in one cohort). |
 | **Never require reading.** Each option = photo crop + icon + short text, and a **private earbud preview** before anything goes public. | About 68% of people with chronic aphasia have reading trouble. |
-| **Max 3 options, literal one first and shortest** ("Baking soda. More." → "Add more baking soda."). | Comprehension is "relatively" preserved, not perfect; choice overload costs time. Literal-first protects authorship. |
+| **Max 3 options, played one at a time, literal one first and shortest** (round 3: one at a time, slower rate; a click hears the next) ("Baking soda. More." → "Add more baking soda."). | Comprehension is "relatively" preserved, not perfect; choice overload costs time. Literal-first protects authorship. |
 | **Core words = verbs and function words** (want, more, no, go, help, fall, show, wait, ask me). Camera = nouns. | In Broca's aphasia, verbs and grammar break more than nouns. Give him the hard part as buttons. |
 | **"Ray has something" / "composing…" on a partner-facing screen.** | Partners speak for, finish for and talk over people with aphasia; speaking-for predicts less participation. A visible signal tells them to wait. This is Supported Conversation (partner training) built into a screen. |
 | **Speak at the partner's turn end, not on silence.** End-of-turn model + manual override. | Mid-sentence pauses are common; an interruption is worse than lateness. |
 | **Cancel the queue if Ray starts speaking himself.** | People with aphasia use their own speech ~70% of the time even with a device. Cue supports his voice; it doesn't replace it. |
 | **Floor-hold and "ask me" clips, instant (<150 ms), no LLM.** | Problem #2 and Scene B. The fastest, most reliable moment in the demo. |
 | **Small, quiet, worn on the body; no glasses, no big screen in the face.** | People with aphasia described head-worn displays as "publicly awkward" and tablets as stigmatizing; stigma is a top reason for abandoning AAC. |
+| **Seated use only** (table, exam room, couch). | His left hand holds his cane when he walks (red team R5). |
 | **Adults only.** | Lingraphica's AI tool is 18+ "due to AI regulations"; avoids the minors question. |
 
 ---

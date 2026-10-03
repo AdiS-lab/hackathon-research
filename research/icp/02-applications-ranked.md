@@ -33,6 +33,8 @@ Read each one-liner out loud **as Ray**. If you can't say it with a straight fac
 
 **The order of the pitch follows the ranking:** #4 opens (judge laughs) → #1 is the invention (with #2 on the partner screen) → #5/#6 show how he composed it → #3 is the dignity line. Everything below #6 is cut from the 90 seconds.
 
+**Round 3 change (red team R1):** #1 assumes Ray can compose while listening, which people with aphasia may find hard (bigger dual-task costs). So #2 (hold the floor) is an equal half of the core, not a sub-feature: *compose ahead when he can, hold the floor when he can't.* The demo shows both. See `04-red-team.md`.
+
 ### The single line to embody
 > **"I'm not slow. I'm late. And late gets you talked over."**
 
@@ -49,12 +51,12 @@ Backup lines by moment:
 There are two versions of this question. Answer the one being asked.
 
 **(a) "Why not text instead of using Cue in the room?"**
-1. **He can't spell or read reliably.** Writing is impaired along with speech after a left-hemisphere stroke (agraphia in about 56% of left-hemisphere stroke patients in one acute series), and about 68% of people with chronic aphasia have reading trouble. Texting success in chronic aphasia tracks aphasia severity and reading/writing deficits, not confidence or how often people text. [POP7, ALT1, POP5]
+1. **Writing and reading break along with speech.** Agraphia showed up in about 56% of left-hemisphere acute stroke patients in one series, and about 68% of people with chronic aphasia have reading trouble. People with milder aphasia do text (about 15 texts a week on average in one study, with huge variation), but how *well* it works tracks aphasia severity and reading/writing deficits, not confidence or practice. Ray's moderate non-fluent profile is the group it works worst for. [POP7, POP5, ALT1, ALT1b]
 2. **One hand.** Most of these users have a weak right hand. Typing a sentence one-handed with the non-dominant hand is slow even without aphasia. [POP6]
 3. **Texting takes him out of the conversation.** Head down, eyes on a phone, at a table where everyone is talking. It's a message to someone who isn't there, not a turn in a conversation. The problem we're solving is the turn.
 4. **It's still late.** A typed message at a few words per minute lands even later than speech.
 
-**Answer in one breath:** *"Most people with aphasia can't spell what they can't say; writing breaks with speech. And a text is head-down and late. Ray needs his turn in the room, not a message."*
+**Answer in one breath:** *"Some people with aphasia text, and it works about as well as their writing does, which for Ray isn't well. More importantly, a text is head-down and late. Ray needs his turn in the room, not a message."*
 
 **(b) "Why is private send a feature at all? Just text."**
 **Honest answer:** for Ray, private send is a weak feature, and we've cut it from the pitch. Its only real advantage over texting is that he composes by pointing and tapping a core word, so **no spelling**, and it goes to one person (Denise) without the room hearing. That is real (bathroom, pain, "let's leave"), but it's rare, and the iMessage path is a sponsor integration, not his core problem. If a judge asks: *"It's the same compose flow, sent to one person instead of the room, because he can't spell a text. It's a side door, not the product."*
@@ -70,7 +72,7 @@ There are two versions of this question. Answer the one being asked.
 | Grid app, word NOT on the board | Spell b-a-k-i-n-g s-o-d-a (11 letters) with agraphia | 30 s+, often impossible |
 | Cue | Point + click ring (≈2.7 s) → tap *more* (≈2.5 s) → hear preview (≈1.5 s) → hold (≈0.5 s) | ~7 s |
 
-So Cue is somewhat faster for a word on the board and much faster for a word that isn't. Page-based layouts measurably slow selection (in one study, 133 vs 193 symbols in 20 minutes for paged vs single-page layouts), and people with aphasia navigate scene-based displays faster and more accurately than grids. [ALT3, ALT4]
+So, honestly: **about the same for a word already on his board** (a good board puts *more* on the home page and *baking soda* one page in, ~3 taps, and Cue's camera can miss and need a retry), and **much faster for a word that isn't on the board**. Page-based layouts do measurably slow selection (133 vs 193 symbols in 20 minutes, paged vs single page), and people with aphasia navigate scene-based displays faster and more accurately than grids. *(Round 3: the earlier "somewhat faster" claim was softened after red-team R8.)*
 
 **2. The real win is when the 7 seconds happen.** With a grid, composing starts when it's his turn, so the conversation waits (or moves on). With Cue, he composes **during the partner's turn** and the reply lands **within 700 ms** of them finishing. The metric changes from words per minute to **reply gap**: about 10–45 s with a board vs under 1 s with Cue. That's what we measure tonight. [CONV7, CONV2]
 
@@ -102,10 +104,10 @@ It waits for an end-of-turn model, not just silence, so mid-sentence pauses don'
 Three ring actions (click, double, hold). No folders. The vocabulary is whatever's in front of him. Garrett & Lasker's "independent communicator" profile, which Ray fits, uses AAC strategies on his own. We say plainly that partner-dependent (severe/global) aphasia is not our user. [POP8]
 
 ### 2.9 "Is the AI putting words in his mouth?"
-He hears every option privately first, the literal one is always first ("Baking soda. More."), and nothing is spoken until he holds or taps. What he delegates is **when**, not **what**. Users themselves trade control for timing when timing matters (CHI '25). [CONV16]
+He hears the options privately first, **one at a time** (literal first, short, slower speech rate; a click plays the next), so he isn't holding three sentences in memory. Nothing is spoken until he holds or taps. What he delegates is **when**, not **what**. Users themselves trade control for timing when timing matters (CHI '25). [CONV16]
 
 ### 2.10 "What about the people being recorded?"
-The mic is used for turn-end detection and short-term context, held in memory for a few turns and never saved. The camera only captures when he clicks. A visible indicator on the partner screen shows when it's listening.
+Turn-end detection (voice activity + the end-of-turn model) runs **locally on the laptop**. Partner transcription, used only for context, runs on-device where the browser supports it; otherwise it uses a cloud speech service (Chrome's default sends audio to Google), and we say so. Transcripts are kept in memory for a few turns and never saved by Cue. The camera only captures when he clicks, and the partner screen shows when Cue is listening. *(Round 3 fix, red-team R9: don't claim audio never leaves the laptop unless that's what was built.)*
 
 ### 2.11 "Who pays?"
 About $30 in parts plus a laptop or tablet he already has, against $250 for an app plus an iPad or $6k–14k for a dedicated device. Not a medical device; a communication tool.
