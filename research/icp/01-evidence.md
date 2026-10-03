@@ -62,7 +62,7 @@ Earlier evidence (timing science, Roberts/Kendrick/Bögels, alexia, hemiparesis,
 
 | # | Claim | Source | Conf. | Used for |
 |---|---|---|---|---|
-| E1 | AAC abandonment drivers: **vocabulary that doesn't match daily life**, maintenance/prep burden, stigma of visible tech, cost, complexity, and **not using residual speech/gesture**. One survey (n = 275) reported 67% citing vocabulary mismatch. | Johnson thesis (UNH); Moorcroft et al. 2019 (UCL); summary of n = 275 survey via secondary review | MED (the 67% is secondary; don't put it on the poster without the primary) | "Vocabulary from the room" + ring + voice-first |
+| E1 | AAC abandonment drivers: **vocabulary that doesn't match daily life**, maintenance/prep burden, stigma of visible tech, cost, complexity, and **not using residual speech/gesture**. An n = 275 survey of AAC-specialist SLPs (Johnson et al. 2006) tied abandonment to poor fit, not adjusting the system, and lack of training/support. (An often-quoted "67% vocabulary mismatch" figure could not be traced to a primary source; don't use it.) | Johnson thesis (UNH); Moorcroft et al. 2019 (UCL); summary of n = 275 survey via secondary review | MED-HIGH | "Vocabulary from the room" + ring + voice-first |
 | E2 | People may be **reluctant to use AAC in public with unfamiliar partners**. | Same reviews | MED | Discreet ring; private earbud preview |
 | E3 | "The words get stuck in my brain. It helps me get them out": people with aphasia valued an aid that helped them build sentences themselves (SentenceShaper). | aphasiology.pitt.edu 2074 (n = 7) | MED | Authorship: Cue helps *his* sentence out, doesn't write one for him |
 

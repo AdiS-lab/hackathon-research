@@ -1,6 +1,6 @@
 ---
 doc: cue-applications-ranked
-status: v1 (round 1 of the 3-hour session, 2026-10-03 00:10–03:00 EDT)
+status: v2 (round 2 added objections 2.13–2.20, 2026-10-03 ~01:20 EDT)
 persona: "Ray, 58, chronic non-fluent aphasia after a left-hemisphere stroke (see 00-ICP.md)"
 evidence_ids: "Bracketed IDs like [C1] point to rows in 03-claims.md"
 ---
@@ -112,6 +112,30 @@ About $30 in parts plus a laptop or tablet he already has, against $250 for an a
 
 ### 2.12 "Why a ring and not a watch or glasses?"
 A ring points and clicks without looking at your wrist. People with aphasia called head-worn displays "publicly awkward" and tablets stigmatizing. Most users have one good hand, and a ring leaves it free to tap. [ALT9, POP6]
+
+### 2.13 "Isn't the invention just software? Why build hardware?"
+Yes, the invention is software: launching an AAC reply at the partner's turn end. The ring exists because the moments that matter (hold, react, "wait") last under a second and happen while his eyes are on a face. A screen button needs eyes and a reach; a ring click needs neither. If the ring fails, the software still works from the screen. Saying this plainly is stronger than pretending the ring is the magic.
+
+### 2.14 "Won't he just recover?"
+Many don't. About two-thirds of people aphasic after a stroke are still aphasic at 12 months, and 30–43% remain severely aphasic at 18 months. Ray is at 14 months; for him this is daily life, not a phase. [POP10]
+
+### 2.15 "Can't he tell when it's his turn on his own?"
+Knowing when someone is about to finish depends on following their words and grammar in real time, and aphasia disrupts exactly that: in an eye-tracking study, people with aphasia were less likely to anticipate turn transitions. And even when he knows, his own output takes seconds to start. Cue watches for the turn end so he doesn't have to. [CONV17]
+
+### 2.16 "His iPad already has quick phrases for 'wait' and 'ask me'."
+It does, and that proves the need. The difference is reach: on a tablet the phrase is behind an unlock, an app and a page, with eyes off the person. On the ring it's one click, under 150 ms, eyes up. A quick phrase that takes 5 seconds to find is a late quick phrase.
+
+### 2.17 "Won't LLM and text-to-speech latency make him late anyway?"
+No, because none of it happens at the turn end. The LLM runs while he composes during the partner's turn; the audio is rendered when he approves. At the turn end Cue only plays a local file. The only latency that matters is turn-end detection, budgeted under 700 ms.
+
+### 2.18 "What if the partner never stops talking, or talks over Cue?"
+Three answers. One click plays "Wait, I want to say something", which works with a talker who doesn't pause. A manual "now" sends it whenever he chooses. And if the partner starts again mid-reply, Cue stops rather than talking over them, and the line stays queued.
+
+### 2.19 "Who pays? Will insurance cover it?"
+Probably not as a speech-generating device. Medicare covers dedicated devices, and Cue isn't one. It doesn't need to be: about $30 in parts plus a laptop or tablet the family already owns. Families buy it directly, or SLPs recommend it as an add-on to therapy. Don't claim insurance coverage.
+
+### 2.20 "Ray isn't real."
+Correct, and we say so: he's a composite where every detail comes from published research (see `01-evidence.md`). A real person's story, shared with consent, is the next step, starting with the University of Michigan Aphasia Program.
 
 ---
 

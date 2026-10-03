@@ -1,6 +1,6 @@
 ---
 doc: cue-claims-ledger
-status: v1 (round 1, 2026-10-03 ~00:30 EDT)
+status: v2 (round 2 verification pass, 2026-10-03 ~01:15 EDT)
 scope: "Every claim the Cue pitch could make, from ALL evidence docs in this repo, tied to sources and graded."
 source_docs:
   - research/icp/01-evidence.md          # ICP: clinical, severity, conversation, pointing, abandonment
@@ -24,7 +24,7 @@ note: "Many publisher and forum sites are blocked from this environment; several
 ```
 T0  "Ray isn't slow. He's late, and late gets you talked over. Cue gets him his turn back."
 ├── T1  Timing carries meaning in conversation ............ CONV1–CONV6
-├── T2  People with aphasia are always late ................ CONV7, CONV8, POP3, POP4
+├── T2  People with aphasia are always late ................ CONV7, CONV8, CONV17, POP3, POP4, POP10
 ├── T3  Lateness costs them: voice, respect, friends, safety  CONV9–CONV14, SEV1–SEV9
 ├── T4  Today's alternatives don't fix timing .............. ALT1–ALT9, NOV2
 ├── T5  Cue's mechanism copies fluent turn-taking, and it's new  CONV6, NOV3, NOV4
@@ -47,7 +47,8 @@ If a judge attacks one branch, defend it with that branch's rows. If a branch ha
 | POP6 | About 61% of people with post-stroke aphasia have right-side weakness. | EJNPN 2019 single-hospital cohort | icp/01 A5; cue/01 B4 | MED | USE ("in one cohort") | Left-hand ring |
 | POP7 | Writing is impaired too: agraphia in ~56% of left-hemisphere acute stroke patients in one series; about a third of all acute strokes. | Acta Medica Saliniana (acute stroke series) | 02-applications §2.1 | MED | Q&A | "Why not text?" |
 | POP8 | Clinicians split people with severe aphasia into "independent" vs "partner-dependent" communicators (Garrett & Lasker 2005). Ray is independent. | AAC-Aphasia Categories; validity study | icp/01 A6 | HIGH | Q&A | "Can he use this?" / who it's NOT for |
-| POP9 | Stroke under 65 is rising (~37% of US stroke hospitalizations under 65 in 2010; +15% for under-65s 2011–2022). | CDC-derived news reports | icp/01 B10 | LOW-MED | VERIFY | Why Ray is 58 (only if asked) |
+| POP9 | Stroke under 65 is rising: self-reported stroke prevalence rose ~15% for adults under 65 between 2011–13 and 2020–22 (14.6% at 18–44, 15.7% at 45–64), vs 7.8% overall. | CDC *MMWR* 73(20), 2024 (BRFSS) | icp/01 B10 | HIGH | Q&A | Why Ray is 58 *(round 2: verified, upgraded)* |
+| POP10 | Aphasia often doesn't go away: about two-thirds of people aphasic in the acute phase were still aphasic at 12 months; 30–43% remain severely aphasic at 18 months. | Laska et al. 2001, *J Intern Med*; Pedersen et al. (Copenhagen Stroke Study) | 02-applications §2.14 | MED-HIGH | Q&A | "Won't he just recover?" *(round 2: new)* |
 
 ## 2. Severity (what it costs)
 
@@ -56,13 +57,14 @@ If a judge attacks one branch, defend it with that branch's rows. If a branch ha
 | SEV1 | People with aphasia report worse health-related quality of life than people with cancer or Alzheimer's. | Lam & Wodchis 2010 | icp/01 B3; cue/01 A2 | MED-HIGH | USE | Poster number 2 |
 | SEV2 | Up to 62% show depression 12 months after stroke. | Hilari et al.; Frontiers Comm 2023 review | icp/01 B3 | MED-HIGH | USE ("up to") | Poster number 2 |
 | SEV3 | After stroke, friends are what disappears; family stays. People with aphasia got the most hurtful responses and lost friends unless friendships were strong before. | Northcott & Hilari 2011 (n = 29, 10 with aphasia); follow-up network study | icp/01 B4 | MED-HIGH | USE | "The friends drift away" |
-| SEV4 | ~28% of working-age people with post-stroke aphasia return to work vs ~45% of stroke survivors overall. | Review in Frontiers Rehab Sci 2025 | icp/01 B5 | MED | Q&A | Stakes |
+| SEV4 | ~28% of working-age people with post-stroke aphasia return to work vs ~45% of stroke survivors overall. | Graham, Pereira & Teasell 2011, *Aphasiology* (systematic review) | icp/01 B5 | MED-HIGH | USE | Stakes *(round 2: primary found)* |
 | SEV5 | Hospital patients with communication disability have about 3× more preventable adverse events. | Bartlett et al. 2008; Hemsley et al. | icp/01 B6 | HIGH | USE | Doctor scene stakes |
 | SEV6 | Clinicians talk to family instead of the patient and stick to basic needs; in recorded visits no physician wrote down keywords. | Carragher et al. 2024; Mayo patient-centred study | icp/01 B7 | MED-HIGH | USE | "Ask me. I understand." |
 | SEV7 | Caregivers of people with aphasia carry more burden and depression than other stroke caregivers (one study OR 3.73 for severe depression). | Several smaller studies (Turkey, Indonesia, Brazil) | icp/01 B8 | MED | Q&A | Denise |
 | SEV8 | Insurance-funded therapy usually ends before recovery does. | American Stroke Association | icp/01 B9 | MED | Q&A | Ray's therapy ended at month 5 |
 | SEV9 | 84.5% (2016) / 86.2% (2020) of Americans have never heard the word "aphasia." | NAA awareness surveys | icp/01 B2 | MED-HIGH | USE | Poster number 1, "why people assume he's confused" |
 | SEV10 | AAC abandonment: in one study only ~39% of SLP-introduced devices were still used after a year. | Johnson (UNH thesis) and cited study | aac-hci/01 P4; cue/01 C2 | MED | Q&A ("in one study") | Why Ray's iPad is in a drawer |
+| SEV11 | UK: 54% of adults have never heard of aphasia, and 20% say they'd assume someone with communication problems had a learning difficulty. | Stroke Association (UK) public survey, 2024–25 | — | MED (advocacy survey) | Q&A | Problem #2: people assume he's less capable *(round 2: new)* |
 
 ## 3. Conversation mechanics (the timing thesis)
 
@@ -84,6 +86,7 @@ If a judge attacks one branch, defend it with that branch's rows. If a branch ha
 | CONV14 | Groups, noise and phone calls are the hardest settings for people with aphasia. | BYU noise studies (AJSLP 2023/2024); needs assessments | icp/01 C6 | MED-HIGH | USE | Sunday dinner scene |
 | CONV15 | AAC devices demand visual attention, so users miss partners' faces and nonverbal cues. | Backchanneling in AAC, 2025 (exploratory, 4 users + 4 SLPs) | aac-hci/01 P6; cue/01 C1 | MED (small n) | Q&A ("an exploratory study") | Ring = eyes up |
 | CONV16 | AAC users will trade control for timing when timing matters. | "Why So Serious?" CHI '25 (7 users) | cue/01 A5 | MED-HIGH | USE (note small n if asked) | Ethics answer |
+| CONV17 | People with aphasia are less likely to anticipate turn transitions: predicting a turn end relies on lexical and syntactic content, which aphasia disrupts (eye-tracking during video conversations). | Preisig et al. 2016, *J Cogn Neurosci* 28(10) | 02-applications §2.18 | MED (lab study, small n) | Q&A | Why Cue detects the turn end for him *(round 2: new)* |
 
 ## 4. Why the alternatives don't fix it
 
@@ -94,7 +97,7 @@ If a judge attacks one branch, defend it with that branch's rows. If a branch ha
 | ALT3 | Paged (multi-page) layouts slow selection: 133 vs 193 symbols in 20 min on the first trial vs a single page. | RESNA 2016 (Anson, layout study) | 02-applications §2.2 | MED (not aphasia-specific) | Q&A | Ring vs tablet |
 | ALT4 | People with aphasia navigate scene-based displays more accurately and faster than grids, with fewer eye fixations (n = 21 eye-tracking). | Pitt/ASHA VSD studies (Brock et al.; Thiessen et al.) | 02-applications §2.2 | MED-HIGH | Q&A | Vocabulary from the real scene |
 | ALT5 | People with aphasia spoke ~70% of the time even with an AAC device available. | CORE linguistic analysis (n = 3) | icp/01 A7 | MED (tiny n) | Q&A ("in one small study") | "His voice beats Cue's voice" |
-| ALT6 | Vocabulary that doesn't match daily life drives abandonment (one survey: 67% of 275). | Secondary review of a survey | icp/01 E1 | LOW | VERIFY (find the primary) | "Vocabulary from the room" |
+| ALT6 | SLPs link AAC abandonment to **poor fit**, not maintaining/adjusting the system, lack of training and lack of support (275 AAC-specialist SLPs). | Johnson, Inglebret, Jones & Ray 2006, *AAC* 22(2) | icp/01 E1 | MED-HIGH | Q&A | "Vocabulary from the room" = a system that adjusts itself *(round 2: the "67%" figure could not be traced to any primary and is dropped, see X13)* |
 | ALT7 | People are reluctant to use AAC in public with unfamiliar partners; stigma drives abandonment. | Abandonment reviews | icp/01 E2 | MED | Q&A | Discreet ring |
 | ALT8 | Partner training works for chronic aphasia, but only for the partners who get it. | Simmons-Mackie et al. 2016 systematic review | 02-applications §2.5 | HIGH (that it works) | Q&A | Partner screen travels with him |
 | ALT9 | People with aphasia found head-worn displays "publicly awkward"; tablets are stigmatizing. | Curtis & Neate 2025 (14 PWA); "Looking Past Screens" ASSETS '24 | cue/01 B5 | MED-HIGH | Q&A | Ring, not glasses |
@@ -135,9 +138,10 @@ If a judge attacks one branch, defend it with that branch's rows. If a branch ha
 | X10 | "2 million Americans with aphasia know exactly what they want to say" | Not true of all aphasia (fluent/global differ) | "People with non-fluent aphasia, like Ray, usually know what they want to say" (POP3) | CUE-SHAREABLE.md tagline |
 | X11 | "OV2640" camera | New XIAO boards ship OV3660 (moot: XIAO isn't coming) | Check sensor ID if Plan C | CUE.md |
 | X12 | Any measured result before we measure it | — | Fill reply-gap numbers at hour 18 | everywhere |
+| X13 | "67% abandoned AAC because vocabulary didn't match daily life (n = 275)" | No primary found; the n = 275 study surveyed **SLPs**, not users, and reports factors, not this percentage | ALT6 wording | icp/01 E1 (fixed) |
 
 ## 8. Gaps: claims we'd like but don't have yet
 1. A direct measurement of **reply gaps in aphasia conversation** (how long people with aphasia actually take to respond in natural talk). Searched indirectly; not found as a single number. We use AAC wait-time guidance (CONV7) instead.
-2. **Primary source for the 67% vocabulary-mismatch figure** (ALT6).
+2. ~~Primary source for the 67% figure~~ Resolved in round 2: not traceable, dropped (X13).
 3. **A named first-person quote we can print** (CONV10 needs the forum author and page check; CONV11 is safe via ASA).
 4. **Any aphasia-specific study of wearables for AAC.** Only glasses/tablet perceptions (ALT9) so far.
