@@ -1,0 +1,415 @@
+<title>Cue: Meet Ray</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (~68ch) with full-bleed tables/diagram; a conversation timeline is the signature visual. */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#1b2430; --muted:#5b6676; --line:#dde2ea;
+  --partner:#7a8aa3; --ray:#c2741b; --cue:#16806f; --late:#b4443a; --chip:#eef1f5;
+  --display:"Familjen Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --body:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --surface:#1a2029; --ink:#e6eaf0; --muted:#9aa5b5; --line:#2c3440;
+  --partner:#8796ad; --ray:#e39a45; --cue:#3cbfa8; --late:#e2766b; --chip:#232b36; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --surface:#1a2029; --ink:#e6eaf0; --muted:#9aa5b5; --line:#2c3440;
+  --partner:#8796ad; --ray:#e39a45; --cue:#3cbfa8; --late:#e2766b; --chip:#232b36; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;padding-inline:16px;padding-block:40px 80px}
+main{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+.col{max-width:68ch}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.65rem;font-weight:700}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:18px}
+.lede{font-size:1.2rem;color:var(--ink)}
+.note{font-size:.88rem;color:var(--muted)}
+.hero{display:flex;flex-direction:column;gap:20px}
+.hero .thesis{font-family:var(--display);font-size:1.35rem;font-weight:500;border-left:3px solid var(--ray);padding-left:16px}
+.ray{color:var(--ray)} .cue{color:var(--cue)} .late{color:var(--late)}
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.box ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;font-size:.95rem}
+.facts dt{font-family:var(--mono);font-size:.78rem;color:var(--muted);padding-top:3px;text-transform:uppercase;letter-spacing:.05em}
+.facts dd{margin:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:.78rem;background:var(--chip);border-radius:999px;padding:4px 10px;color:var(--muted)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:620px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{height:6px;border-radius:3px;background:var(--line);margin-top:6px;width:110px}
+.bar i{display:block;height:100%;border-radius:3px}
+.yes i{background:var(--cue)} .part i{background:var(--ray)} .no i{background:var(--partner)}
+.verdict{font-family:var(--mono);font-size:.75rem;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.v-yes{background:color-mix(in srgb,var(--cue) 18%,transparent);color:var(--cue)}
+.v-part{background:color-mix(in srgb,var(--ray) 18%,transparent);color:var(--ray)}
+.v-no{background:var(--chip);color:var(--muted)}
+tr.out td{color:var(--muted)}
+.callout{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.timeline{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 16px}
+.timeline svg{width:100%;height:auto;display:block;min-width:600px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-top:10px}
+.legend span::before{content:"";display:inline-block;width:12px;height:8px;border-radius:2px;margin-right:6px;vertical-align:middle;background:var(--c)}
+.scenes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.scene{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.scene.demo{border:2px solid var(--cue)}
+.scene .time{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.scene .tag{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--cue)}
+.scene p{font-size:.93rem}
+.scene b{font-family:var(--display);font-weight:700}
+blockquote{margin:0;font-family:var(--display);font-size:1.25rem;font-weight:500;line-height:1.4;border-left:3px solid var(--cue);padding-left:18px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.stat{display:flex;flex-direction:column;gap:6px}
+.stat strong{font-family:var(--display);font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.92rem;color:var(--muted)}
+.qa{display:flex;flex-direction:column;gap:14px}
+.qa div{display:flex;flex-direction:column;gap:4px}
+.qa .q{font-family:var(--display);font-weight:700}
+.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;font-size:.93rem}
+footer{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+code{font-family:var(--mono);font-size:.85em;background:var(--chip);padding:1px 5px;border-radius:4px}
+@media (max-width:520px){body{font-size:16px}.facts{grid-template-columns:1fr}.facts dt{padding-top:8px}}
+.rank td.line{font-family:var(--display);font-style:italic;color:var(--ink)}
+tr.cut td{color:var(--muted)} tr.cut td.line{color:var(--muted)}
+.objs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.obj{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.obj .q{font-family:var(--display);font-weight:700;font-size:1.05rem}
+.obj .short{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--cue)}
+.obj p{font-size:.93rem}
+.obj .say{border-left:3px solid var(--cue);padding-left:12px;font-style:italic}
+.risk{font-family:var(--mono);font-size:.72rem;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.r-hold{background:color-mix(in srgb,var(--cue) 18%,transparent);color:var(--cue)}
+.r-open{background:color-mix(in srgb,var(--late) 18%,transparent);color:var(--late)}
+.tree{font-family:var(--mono);font-size:.82rem;line-height:1.7;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;white-space:pre;overflow-x:auto}
+</style>
+
+<main>
+  <header class="hero">
+    <p class="eyebrow">Cue · ICP research · MHacks 2026</p>
+    <h1>Ray isn't slow. He's late, and late gets you talked over.</h1>
+    <p class="lede col">Cue's ideal customer is one adult with chronic non-fluent aphasia after a stroke, at home with a spouse. This page shows who he is, ranks what hurts, walks through his day, and gives the pitch in his terms.</p>
+    <p class="thesis col">Research verdict: lead with <span class="ray">losing his turn</span>, told through Ray. The camera is act two: it turns the pointing he already does into words.</p>
+  </header>
+
+  <section>
+    <p class="eyebrow">The one person</p>
+    <h2>Ray, 58</h2>
+    <p class="note col">A fictional composite. Every detail matches a documented pattern for this group; say "composite" if asked.</p>
+    <div class="box">
+      <dl class="facts">
+        <dt>Was</dt><dd>High-school chemistry teacher for 30 years in Ypsilanti. Talked for a living. Bad puns.</dd>
+        <dt>Stroke</dt><dd>Left-hemisphere (MCA), 14 months ago. Moderate non-fluent (Broca's-type) aphasia with apraxia of speech.</dd>
+        <dt>Home</dt><dd>Wife Denise, 56, works full time. Granddaughter Maya, 9, is over most Sundays.</dd>
+        <dt>Care</dt><dd>Outpatient speech therapy ended at month 5 when the visits ran out. Aphasia group once a week.</dd>
+        <dt>AAC</dt><dd>A symbol app on an iPad. Used it two weeks; now it's in a drawer. Too many folders, too slow, made him "look sick" at dinner.</dd>
+        <dt>Wants</dt><dd>Independence and respect. To give his opinion. Social life back, maybe part-time work. Not "talking faster".</dd>
+      </dl>
+    </div>
+    <div class="profile">
+      <div class="box">
+        <h3 class="cue">What he can do</h3>
+        <ul>
+          <li>Understands most everyday conversation</li>
+          <li>Knows exactly what he wants to say</li>
+          <li>1–3 word bursts: <em>"Coffee… no. Uh… tea."</em></li>
+          <li>Nouns come easier than verbs</li>
+          <li>Points and gestures constantly</li>
+          <li>"Yes", "no" and a few automatic phrases</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3 class="late">What he can't do</h3>
+        <ul>
+          <li>Build a sentence on demand, on time</li>
+          <li>Read more than a few words without effort</li>
+          <li>Use his right hand well (cane in the left)</li>
+          <li>Phone calls</li>
+          <li>Get a word in at a loud family dinner</li>
+        </ul>
+      </div>
+    </div>
+    <div class="chips" aria-label="Who Ray is not">
+      <span class="chip">Not global aphasia</span><span class="chip">Not fluent / Wernicke's</span><span class="chip">Not progressive aphasia</span><span class="chip">Not ALS / eye gaze</span><span class="chip">Not CP / switch</span><span class="chip">Not children</span><span class="chip">Not autism (future co-design)</span>
+    </div>
+    <div class="callout col">
+      <h3>The second user: Denise</h3>
+      <p>Caregivers of stroke survivors with aphasia carry more burden and more depression than those without it. She often speaks for Ray: answers the doctor, finishes his sentences. Research links that "speaking for" to Ray taking part less. Cue has to change her behavior too, so the partner screen tells her when to wait.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Severity</p>
+    <h2>Ray's problems, ranked</h2>
+    <p class="note col">Frequency × harm × how badly today's tools fail, each 1–5 (max 125).</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>#</th><th>Problem, as Ray lives it</th><th>Score</th><th>Cue</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>The conversation moves on without him.</b> By the time a word is ready the topic has changed; people finish for him or switch to yes/no questions.</td><td class="num">125<div class="bar yes"><i style="width:100%"></i></div></td><td><span class="verdict v-yes">Core</span></td></tr>
+          <tr><td class="num">2</td><td><b>People think he's less capable than he is.</b> "Where's your mother?" on the phone. Waiters and doctors talk to Denise. A late "yes" sounds unsure.</td><td class="num">100<div class="bar yes"><i style="width:80%"></i></div></td><td><span class="verdict v-yes">Mostly</span></td></tr>
+          <tr><td class="num">3</td><td><b>He has the noun but not the sentence.</b> "Water… want." Verbs and grammar words break first in Broca's aphasia.</td><td class="num">80<div class="bar yes"><i style="width:64%"></i></div></td><td><span class="verdict v-yes">Yes</span></td></tr>
+          <tr class="out"><td class="num">4</td><td><b>Phone calls.</b> Nearly impossible.</td><td class="num">60<div class="bar no"><i style="width:48%"></i></div></td><td><span class="verdict v-no">Out of scope</span></td></tr>
+          <tr><td class="num">5</td><td><b>Pointing turns into 20 questions.</b> He points at the shelf; Denise guesses remote, book, glasses.</td><td class="num">48<div class="bar yes"><i style="width:38%"></i></div></td><td><span class="verdict v-yes">Camera</span></td></tr>
+          <tr class="out"><td class="num">6</td><td><b>Reading and writing.</b> Mail, texts, menus.</td><td class="num">48<div class="bar no"><i style="width:38%"></i></div></td><td><span class="verdict v-no">Out of scope</span></td></tr>
+          <tr><td class="num">7</td><td><b>Tip of the tongue.</b> Knows the thing, can't get the name, and therapy has ended.</td><td class="num">45<div class="bar part"><i style="width:36%"></i></div></td><td><span class="verdict v-part">Cue-me</span></td></tr>
+          <tr><td class="num">8</td><td><b>Unsafe at the doctor and in hospital.</b> About 3× more preventable adverse events.</td><td class="num">40<div class="bar part"><i style="width:32%"></i></div></td><td><span class="verdict v-part">Partly</span></td></tr>
+          <tr><td class="num">9</td><td><b>AAC devices don't fit his life.</b> Wrong vocabulary, too many folders, eyes off faces, stigma.</td><td class="num">36<div class="bar yes"><i style="width:29%"></i></div></td><td><span class="verdict v-yes">By design</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="col">Ray's worst problem isn't vocabulary. It's <b>losing his turn</b>: the conversation can't wait, so others speak for him, he looks less capable than he is, and friends drift away. Problems 3 and 5 are how Cue lets him compose fast enough to get the turn back.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">The mechanism</p>
+    <h2>Same reply, different moment</h2>
+    <p class="col">Maya is explaining her science-fair volcano. Ray knows why it fizzled. Top row: today. Bottom row: with Cue.</p>
+    <div class="timeline scroll">
+      <svg viewBox="0 0 760 250" role="img" aria-label="Timeline comparing Ray's reply today, arriving after the topic has changed, with Cue, where Ray composes during Maya's turn and Cue speaks within 700 milliseconds of her finishing.">
+        <style>
+          .t{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+          .tl{font-family:var(--display);font-size:13px;font-weight:700;fill:var(--ink)}
+          .ti{font-family:var(--mono);font-size:10.5px;fill:var(--surface)}
+          .ax{stroke:var(--line);stroke-width:1}
+        </style>
+        <!-- scale: x = 110 + sec*30, 0..20 s -->
+        <line class="ax" x1="110" y1="225" x2="710" y2="225"/>
+        <g class="t">
+          <text x="110" y="242" text-anchor="middle">0 s</text>
+          <text x="260" y="242" text-anchor="middle">5</text>
+          <text x="410" y="242" text-anchor="middle">10</text>
+          <text x="560" y="242" text-anchor="middle">15</text>
+          <text x="710" y="242" text-anchor="middle">20 s</text>
+        </g>
+        <!-- TODAY -->
+        <text class="tl" x="0" y="34">Today</text>
+        <rect x="110" y="20" width="210" height="22" rx="4" fill="var(--partner)"/>
+        <text class="ti" x="118" y="35">Maya: "…it just fizzed."</text>
+        <rect x="320" y="20" width="135" height="22" rx="4" fill="var(--partner)" opacity=".6"/>
+        <text class="ti" x="328" y="35">Son answers for him</text>
+        <rect x="455" y="20" width="135" height="22" rx="4" fill="var(--partner)" opacity=".35"/>
+        <text class="t" x="463" y="35" style="fill:var(--ink)">Topic: dinner</text>
+        <rect x="320" y="52" width="270" height="22" rx="4" fill="var(--ray)" opacity=".35"/>
+        <text class="t" x="328" y="67" style="fill:var(--ink)">Ray: "Bak… uh…"</text>
+        <rect x="590" y="52" width="60" height="22" rx="4" fill="var(--late)"/>
+        <text class="ti" x="597" y="67">too late</text>
+        <!-- WITH CUE -->
+        <text class="tl" x="0" y="134">With Cue</text>
+        <rect x="110" y="120" width="210" height="22" rx="4" fill="var(--partner)"/>
+        <text class="ti" x="118" y="135">Maya: "…it just fizzed."</text>
+        <rect x="140" y="152" width="150" height="22" rx="4" fill="var(--ray)" opacity=".35"/>
+        <text class="t" x="146" y="167" style="fill:var(--ink)">point · "more" · hear · hold</text>
+        <rect x="290" y="152" width="30" height="22" rx="4" fill="var(--ray)"/>
+        <text class="t" x="210" y="192" style="fill:var(--muted)">composed during HER turn</text>
+        <rect x="335" y="120" width="118" height="22" rx="4" fill="var(--cue)"/>
+        <text class="ti" x="341" y="135">"Add more baking…"</text>
+        <line x1="320" y1="112" x2="320" y2="200" stroke="var(--cue)" stroke-dasharray="3 3"/>
+        <text class="t" x="326" y="110" style="fill:var(--cue)">&lt; 700 ms</text>
+        <rect x="460" y="120" width="165" height="22" rx="4" fill="var(--partner)"/>
+        <text class="ti" x="467" y="135">Maya: "Grandpa, how much?"</text>
+      </svg>
+      <div class="legend">
+        <span style="--c:var(--partner)">partner speaking</span>
+        <span style="--c:var(--ray)">Ray composing</span>
+        <span style="--c:var(--cue)">Cue speaks Ray's line</span>
+        <span style="--c:var(--late)">reply lost</span>
+      </div>
+    </div>
+    <p class="note col">Fluent speakers do exactly this: plan during the other person's turn, launch on the turn-end cue. Cue gives Ray the same overlap. Timing is illustrative; the 700 ms target comes from Kendrick &amp; Torreira 2015.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">A day with Ray</p>
+    <h2>Four scenes, before and with Cue</h2>
+    <div class="scenes">
+      <article class="scene">
+        <p class="time">7:45 am · breakfast</p>
+        <h3>"Coffee or tea?"</h3>
+        <p><b>Before:</b> "Tea." Yes/no and either/or questions already work.</p>
+        <p><b>With Cue:</b> No change. Cue stays quiet. If Ray speaks, any queued line is cancelled. His voice beats Cue's voice.</p>
+      </article>
+      <article class="scene">
+        <p class="time">11:30 am · neurologist</p>
+        <h3>"How's his balance?"</h3>
+        <p><b>Before:</b> The doctor asks Denise. Ray fell Tuesday and she doesn't know. "Uh… Tues…" The doctor moves on.</p>
+        <p><b>With Cue:</b> Double-click: <em>"Ask me. I understand."</em> plays instantly. The desk screen says "Ray is composing…". He taps <em>fall</em> + <em>Tuesday</em>, hears options, picks <em>"I fell on Tuesday."</em></p>
+      </article>
+      <article class="scene demo">
+        <p class="tag">The demo</p>
+        <p class="time">5:30 pm Sunday · kitchen table</p>
+        <h3>Maya's volcano</h3>
+        <p><b>Before:</b> "Bak… uh…" His son: "Dad means it's fine, sweetie." Topic moves to dinner. Ray goes quiet.</p>
+        <p><b>With Cue:</b> While Maya talks, he points at the baking soda, clicks, taps <em>more</em>, hears <em>"Add more baking soda"</em>, holds. Screen: "Ray has something." She pauses mid-sentence; Cue waits. She finishes; Cue speaks. "Grandpa, really? How much?"</p>
+      </article>
+      <article class="scene">
+        <p class="time">8:30 pm · TV</p>
+        <h3>The joke on screen</h3>
+        <p><b>Before:</b> The moment's gone before he can say anything.</p>
+        <p><b>With Cue:</b> One click: "Ha! Did you see that?" in under 150 ms. Faster replies are how people feel connected.</p>
+      </article>
+    </div>
+    <p class="note col">What Cue can't do for Ray: phone calls, reading his mail, long talk about things that aren't in the room. It doesn't treat aphasia; it gets him his turn back.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Applications, ranked</p>
+    <h2>What Cue does for Ray, in his words</h2>
+    <p class="note col">Score = pain × fit × demo × novelty, each 1–5 (max 625). Read each line out loud as Ray; if you can't say it with a straight face, it isn't in the pitch.</p>
+    <div class="scroll">
+      <table class="rank">
+        <thead><tr><th>#</th><th>Application</th><th>Ray says</th><th>Score</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Speak at turn end.</b> Compose while they talk; Cue says it as they finish.</td><td class="line">"I had the answer. By the time I could say it, my son had already said it for me."</td><td class="num">625</td></tr>
+          <tr><td class="num">2</td><td><b>Hold the floor.</b> "Ray has something" on screen; one click: "Wait, I want to say something."</td><td class="line">"Everyone keeps talking because nobody can tell I'm about to."</td><td class="num">400</td></tr>
+          <tr><td class="num">3</td><td><b>"Ask me. I understand."</b> Instant clip at the doctor or counter.</td><td class="line">"The doctor asked my wife how my balance was. I'm the one who fell."</td><td class="num">300</td></tr>
+          <tr><td class="num">4</td><td><b>Instant reactions.</b> Laugh or "mm-hmm" in under 150 ms.</td><td class="line">"My laugh shows up after everyone's done laughing."</td><td class="num">240</td></tr>
+          <tr><td class="num">5</td><td><b>Point instead of 20 questions.</b> The point becomes an exact word.</td><td class="line">"I point at it and she guesses wrong four times."</td><td class="num">96</td></tr>
+          <tr><td class="num">6</td><td><b>Noun + one verb → sentence.</b> Options heard one at a time, literal first.</td><td class="line">"I have 'water'. I don't have 'Can I have some'."</td><td class="num">96</td></tr>
+          <tr class="cut"><td class="num">7</td><td>"Cue me": hear only the first sound</td><td class="line">"I know the word. Just give me the first sound."</td><td class="num">81</td></tr>
+          <tr class="cut"><td class="num">8</td><td>Name an unfamiliar object</td><td class="line">"I can't read the label."</td><td class="num">36</td></tr>
+          <tr class="cut"><td class="num">9</td><td>Private send (as a text)</td><td class="line">"I don't want the whole restaurant to hear."</td><td class="num">16</td></tr>
+          <tr class="cut"><td class="num">10</td><td>Point to turn on the lamp</td><td class="line">"I can't reach the switch."</td><td class="num">16</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout col">
+      <h3>The core is a pair, not one feature</h3>
+      <p>#1 assumes Ray can compose while still listening, and people with aphasia pay a bigger cost when doing two things at once. So #2 is the other half of the core: <b>compose ahead when he can, hold the floor when he can't.</b> The demo shows both. Rows 7–10 are cut from the 90 seconds.</p>
+    </div>
+    <blockquote class="col">"I'm not slow. I'm late. And late gets you talked over."</blockquote>
+  </section>
+
+  <section>
+    <p class="eyebrow">The obvious questions</p>
+    <h2>Answers a judge can't knock over</h2>
+    <div class="objs">
+      <article class="obj">
+        <p class="short">Texting</p>
+        <p class="q">"Why can't he just text?"</p>
+        <p>Writing and reading break with speech: about 68% of people with chronic aphasia have reading trouble, and agraphia is common after left-side strokes. Some people with aphasia do text, but how well it works tracks severity and reading/writing, and Ray is the group it works worst for. One hand. And a text is head-down and late.</p>
+        <p class="say">"A text is a message to someone who isn't there. Ray needs his turn in the room."</p>
+      </article>
+      <article class="obj">
+        <p class="short">Private send</p>
+        <p class="q">"Then why text privately through Cue?"</p>
+        <p>Honestly, it's a weak feature and it's cut from the pitch. Its only edge over texting: he composes by pointing and one tap, with no spelling, and it reaches Denise without the room hearing.</p>
+        <p class="say">"Same compose flow, sent to one person, because he can't spell a text. A side door, not the product."</p>
+      </article>
+      <article class="obj">
+        <p class="short">Ring vs tablet</p>
+        <p class="q">"Is a ring plus a tablet faster than tapping the tablet?"</p>
+        <p>Per tap, no. For a word already on his board it's about the same; for a word that isn't, much faster (no spelling). The win is when the composing happens (during your turn), eyes up, with his one good hand. Everything also works by tapping.</p>
+        <p class="say">"We don't measure words per minute. We measure the gap: about 30 seconds with a board, under a second with Cue."</p>
+      </article>
+      <article class="obj">
+        <p class="short">Speech recognition</p>
+        <p class="q">"Why not Siri or dictation?"</p>
+        <p>Off-the-shelf speech recognition had about 61–70% word error on aphasic speech, and around 32–36% even after fine-tuning. His problem is getting words out, not transcribing them.</p>
+      </article>
+      <article class="obj">
+        <p class="short">Partner training</p>
+        <p class="q">"Why not train his family to wait?"</p>
+        <p>Partner training works, but only for partners who get it. His doctor, the waiter and his old colleagues never will. The "Ray has something" screen is a partner-training prompt that comes with him.</p>
+      </article>
+      <article class="obj">
+        <p class="short">Competition</p>
+        <p class="q">"Lingraphica and Lucid Voice already do AI replies."</p>
+        <p>They help with what to say and still speak whenever he presses the button. Cue decides when: at your turn end. We found nothing else that does.</p>
+      </article>
+      <article class="obj">
+        <p class="short">Recovery</p>
+        <p class="q">"Won't he just recover?"</p>
+        <p>Many don't: about two-thirds are still aphasic at 12 months, and 30–43% remain severely aphasic at 18 months. Ray is at 14 months.</p>
+      </article>
+      <article class="obj">
+        <p class="short">Software vs hardware</p>
+        <p class="q">"Isn't the invention just software?"</p>
+        <p>Yes. The ring exists because hold, react and "wait" happen in under a second while his eyes are on a face. If the ring fails, the software still works from the screen.</p>
+      </article>
+    </div>
+    <h3>Open risks we say out loud</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Risk</th><th>Status</th><th>What we say</th></tr></thead>
+        <tbody>
+          <tr><td>Can Ray compose while listening?</td><td><span class="risk r-open">Open</span></td><td>Floor-hold covers it; the first thing we'd test with the U-M Aphasia Program.</td></tr>
+          <tr><td>Do listeners forgive lateness from AAC users?</td><td><span class="risk r-open">Open</span></td><td>The timing science is on typical speakers; the harm (talked over, friends drift) holds either way.</td></tr>
+          <tr><td>Turn-end detection in a group</td><td><span class="risk r-open">Open</span></td><td>Demo is one partner; in groups, floor-hold is the reliable tool.</td></tr>
+          <tr><td>Privacy of partner audio</td><td><span class="risk r-hold">Patched</span></td><td>Turn-end detection is local; cloud transcription, if used, is disclosed.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">The claims</p>
+    <h2>How the argument hangs together</h2>
+    <p class="col">About 60 claims from every evidence doc in the repo, each graded and tied to a source in <code>research/icp/03-claims.md</code>. This is the tree; defend a branch with its rows.</p>
+    <div class="tree">T0  Ray isn't slow. He's late, and late gets you talked over. Cue gets him his turn back.
+├─ T1  Timing carries meaning ............ 200 ms gaps; past 700 ms a yes sounds reluctant
+├─ T2  He is always late ................. 10–45 s wait time; turn ends are harder to predict with aphasia
+├─ T3  Lateness costs him ................ spoken for, seen as less capable, friends drift, 3× hospital harm
+├─ T4  Alternatives don't fix timing ..... texting, dictation, grids, partner training, AI reply apps
+├─ T5  Cue copies fluent turn-taking ..... plan during their turn, launch on the cue; nothing else found doing this
+└─ T6  Cue fits his body ................. left hand, no reading, nouns by pointing, his voice first</div>
+    <p class="note col">Dropped after verification: the "67% abandoned AAC over vocabulary" figure (no original study found), "$300+ Proloquo2Go" ($249.99), "faster AAC", and "everyone with aphasia knows exactly what they want to say".</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Built for Ray</p>
+    <h2>Design requirements, each with its reason</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Requirement</th><th>Because</th></tr></thead>
+        <tbody>
+          <tr><td>Ring on the <b>left</b> index finger; everything one-handed</td><td>About 61% of people with post-stroke aphasia have right-side weakness</td></tr>
+          <tr><td>Never require reading: photo + icon + short text, private earbud preview</td><td>About 68% of people with chronic aphasia have reading trouble</td></tr>
+          <tr><td>Max 3 options; the literal one first and shortest</td><td>Comprehension is only relatively preserved; literal-first protects authorship</td></tr>
+          <tr><td>Core-word buttons are verbs (want, more, show, fall, wait); the camera gives nouns</td><td>In Broca's aphasia verbs and grammar break more than nouns</td></tr>
+          <tr><td>Partner screen: "Ray has something" / "composing…"</td><td>"Speaking for" predicts less participation; the screen tells partners to wait</td></tr>
+          <tr><td>Speak at turn end (end-of-turn model), not on any silence</td><td>Interrupting is worse than being late</td></tr>
+          <tr><td>Cancel the queue when Ray speaks</td><td>People with aphasia use their own speech ~70% of the time even with a device</td></tr>
+          <tr><td>Instant floor-hold and "ask me" clips, no AI</td><td>Problem 2 and the doctor scene; the most reliable demo moment</td></tr>
+          <tr><td>Small and worn; no glasses, no big screen in his face</td><td>Glasses were "publicly awkward"; stigma drives AAC abandonment</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">The pitch</p>
+    <h2>How to present it</h2>
+    <h3>The first 15 seconds</h3>
+    <blockquote class="col">Ray taught chemistry for 30 years. Since his stroke he has aphasia: he understands everything and knows what he wants to say, but the words come one at a time. At Sunday dinner, by the time his answer is ready, his son is answering for him. Ray isn't slow. He's late, and late gets you talked over. Cue gets him his turn back.</blockquote>
+    <h3>Severity in three numbers</h3>
+    <div class="three">
+      <div class="stat"><strong>2M+</strong><span>Americans live with aphasia, more than Parkinson's, and 86% of people have never heard the word.</span></div>
+      <div class="stat"><strong>62%</strong><span>show depression a year after stroke. Quality of life is rated below cancer. Friends are what disappears.</span></div>
+      <div class="stat"><strong>200 ms</strong><span>is a normal turn gap. Ray needs 10–45 s. Past 700 ms, a "yes" starts to sound reluctant.</span></div>
+    </div>
+    <h3>Hard questions</h3>
+    <div class="qa col">
+      <div><p class="q">"Can he even use this?"</p><p>His profile, non-fluent aphasia with good comprehension and one good hand, is the one that uses AAC independently. We designed for his left hand and limited reading, and we name who it won't work for.</p></div>
+      <div><p class="q">"Is the AI putting words in his mouth?"</p><p>Ray picks every word, and the literal option is always first. What he hands to Cue is when, not what.</p></div>
+      <div><p class="q">"He abandoned his iPad app. Why use this?"</p><p>He dropped it for the usual reasons: wrong vocabulary, slow, eyes off faces. Cue's vocabulary is what's on the table, it sits on his finger, and his own voice comes first.</p></div>
+      <div><p class="q">"Did you test with people with aphasia?"</p><p>Not yet. Ray is a composite from the research. Our first call is the University of Michigan Aphasia Program here in Ann Arbor, the oldest in the country.</p></div>
+    </div>
+    <div class="words">
+      <div class="box"><h3 class="cue">Say</h3><p>gets his turn back · on time · he chooses every word · composite · people with aphasia · communication tool</p></div>
+      <div class="box"><h3 class="late">Don't say</h3><p>voice for the voiceless · nonverbal (Ray has words) · faster AAC · fixes aphasia · patients · suffers from</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Full research with sources and confidence levels: <code>research/icp/00-ICP.md</code> (persona), <code>01-evidence.md</code> (sources), <code>02-applications-ranked.md</code> (ranking + 20 objections), <code>03-claims.md</code> (claims ledger) and <code>04-red-team.md</code> on branch <code>claude/icp-research-problems-0k7dwt</code>. Key sources: Worrall et al. 2011; Northcott &amp; Hilari 2011; NAA awareness surveys 2016/2020; Bartlett et al. 2008; Croteau &amp; Le Dorze (overprotection); Goodwin 2000; Brookshire et al. 2014; Kendrick &amp; Torreira 2015.
+  </footer>
+</main>
